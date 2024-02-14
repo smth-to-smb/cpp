@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
     branches:
+      - master
       - main
       - 'releases/*'
 
@@ -16,3 +17,5 @@ jobs:
           fetch-depth: 0
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2023.3
+        with:
+          args: -l jetbrains/qodana-clang:2023.3-eap

@@ -18,4 +18,4 @@ jobs:
       - name: 'Qodana Scan'
         uses: JetBrains/qodana-action@v2023.3
         with:
-          args: -l jetbrains/qodana-clang:2023.3-eap
+          args: -l registry.jetbrains.team/p/sa/containers/qodana-clang

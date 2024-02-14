@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/CodeAnalysis.cpp.o -c /data/project/CodeAnalysis.cpp",
+  "file": "/data/project/CodeAnalysis.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/DFAchecks.cpp.o -c /data/project/DFAchecks.cpp",
+  "file": "/data/project/DFAchecks.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/Clang_Tidy_modernize.cpp.o -c /data/project/Clang_Tidy_modernize.cpp",
+  "file": "/data/project/Clang_Tidy_modernize.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/Clang_Tidy_google.cpp.o -c /data/project/Clang_Tidy_google.cpp",
+  "file": "/data/project/Clang_Tidy_google.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/Clang_Tidy_cppcoreguidelines.cpp.o -c /data/project/Clang_Tidy_cppcoreguidelines.cpp",
+  "file": "/data/project/Clang_Tidy_cppcoreguidelines.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/cppcast_quickfixes.cpp.o -c /data/project/cppcast_quickfixes.cpp",
+  "file": "/data/project/cppcast_quickfixes.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/GoToFail.cpp.o -c /data/project/GoToFail.cpp",
+  "file": "/data/project/GoToFail.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/Clang_Tidy_options.cpp.o -c /data/project/Clang_Tidy_options.cpp",
+  "file": "/data/project/Clang_Tidy_options.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/argument_selection_inspection.cpp.o -c /data/project/argument_selection_inspection.cpp",
+  "file": "/data/project/argument_selection_inspection.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/code_analysis_summary.cpp.o -c /data/project/code_analysis_summary.cpp",
+  "file": "/data/project/code_analysis_summary.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/naming_inspections.cpp.o -c /data/project/naming_inspections.cpp",
+  "file": "/data/project/naming_inspections.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/lifetime_safety_samples.cpp.o -c /data/project/lifetime_safety_samples.cpp",
+  "file": "/data/project/lifetime_safety_samples.cpp"
+},
+{
+  "directory": "/data/project/build",
+  "command": "/usr/lib/llvm-16/bin/clang++    -o CMakeFiles/code_analysis.dir/MISRA_inspections.cpp.o -c /data/project/MISRA_inspections.cpp",
+  "file": "/data/project/MISRA_inspections.cpp"
+}
+]

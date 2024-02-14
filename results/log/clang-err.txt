@@ -1,0 +1,144 @@
+File: /data/project/cppcast_quickfixes.cpp
+8 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+71 warnings generated.
+
+File: /data/project/GoToFail.cpp
+3 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+22 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+7 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+4 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+1006 warnings generated.
+
+File: /data/project/naming_inspections.cpp
+1621 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+1776 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+2044 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+2016 warnings generated.
+
+File: /data/project/cppcast_quickfixes.cpp
+8 warnings generated.
+
+File: /data/project/GoToFail.cpp
+3 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+71 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+7 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+4 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+22 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+1006 warnings generated.
+
+File: /data/project/naming_inspections.cpp
+1621 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+1776 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+2044 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+2016 warnings generated.
+
+File: /data/project/cppcast_quickfixes.cpp
+8 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+22 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+71 warnings generated.
+
+File: /data/project/GoToFail.cpp
+3 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+4 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+7 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+1006 warnings generated.
+
+File: /data/project/naming_inspections.cpp
+1621 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+1776 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+2016 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+2044 warnings generated.
+
+File: /data/project/GoToFail.cpp
+3 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+4 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+71 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+7 warnings generated.
+
+File: /data/project/cppcast_quickfixes.cpp
+8 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+22 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+1006 warnings generated.
+
+File: /data/project/naming_inspections.cpp
+1621 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+1776 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+2016 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+2044 warnings generated.
+

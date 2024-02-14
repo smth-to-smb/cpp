@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="qodana_cpp_demo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="code_analysis">
+				<Option output="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/libcode_analysis.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 code_analysis"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="code_analysis/fast">
+				<Option output="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/libcode_analysis.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 code_analysis/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/Clang_Tidy_cppcoreguidelines.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/Clang_Tidy_google.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/Clang_Tidy_modernize.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/Clang_Tidy_options.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/CodeAnalysis.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/DFAchecks.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/GoToFail.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/MISRA_inspections.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/argument_selection_inspection.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/code_analysis_summary.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/cppcast_quickfixes.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/lifetime_safety_samples.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/naming_inspections.cpp">
+			<Option target="code_analysis"/>
+		</Unit>
+		<Unit filename="/home/Anton.Samarin/Desktop/issues/2023.3/Cpp/cpp-demo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

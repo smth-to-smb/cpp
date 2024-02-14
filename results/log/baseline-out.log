@@ -1,0 +1,164 @@
+
+Qodana - Detailed summary
+Analysis results: 86 problems detected
+By severity: warning - 86
+----------------------------------------------------------------------------
+Name                                                Severity  Problems count
+----------------------------------------------------------------------------
+owning-memory                                        warning               8
+use-nodiscard                                        warning               7
+init-variables                                       warning               6
+convert-member-functions-to-static                   warning               5
+avoid-c-arrays                                       warning               4
+default-arguments                                    warning               4
+explicit-constructor                                 warning               4
+use-auto                                             warning               4
+use-nullptr                                          warning               4
+pro-bounds-constant-array-index                      warning               3
+pro-bounds-pointer-arithmetic                        warning               3
+pro-type-const-cast                                  warning               3
+avoid-bind                                           warning               2
+avoid-const-or-ref-data-members                      warning               2
+avoid-goto                                           warning               2
+loop-convert                                         warning               2
+macro-to-enum                                        warning               2
+pass-by-value                                        warning               2
+prefer-member-initializer                            warning               2
+pro-type-reinterpret-cast                            warning               2
+redundant-void-arg                                   warning               2
+runtime-operator                                     warning               2
+special-member-functions                             warning               2
+use-equals-default                                   warning               2
+avoid-non-const-global-variables                     warning               1
+misleading-indentation                               warning               1
+non-const-parameter                                  warning               1
+pro-bounds-array-to-pointer-decay                    warning               1
+pro-type-vararg                                      warning               1
+return-braced-init-list                              warning               1
+str34-c                                              warning               1
+----------------------------------------------------------------------------
+
+
+
+Qodana - Detailed summary
+Analysis results: 86 problems detected
+By severity: warning - 86
+----------------------------------------------------------------------------
+Name                                                Severity  Problems count
+----------------------------------------------------------------------------
+owning-memory                                        warning               8
+use-nodiscard                                        warning               7
+init-variables                                       warning               6
+convert-member-functions-to-static                   warning               5
+avoid-c-arrays                                       warning               4
+default-arguments                                    warning               4
+explicit-constructor                                 warning               4
+use-auto                                             warning               4
+use-nullptr                                          warning               4
+pro-bounds-constant-array-index                      warning               3
+pro-bounds-pointer-arithmetic                        warning               3
+pro-type-const-cast                                  warning               3
+avoid-bind                                           warning               2
+avoid-const-or-ref-data-members                      warning               2
+avoid-goto                                           warning               2
+loop-convert                                         warning               2
+macro-to-enum                                        warning               2
+pass-by-value                                        warning               2
+prefer-member-initializer                            warning               2
+pro-type-reinterpret-cast                            warning               2
+redundant-void-arg                                   warning               2
+runtime-operator                                     warning               2
+special-member-functions                             warning               2
+use-equals-default                                   warning               2
+avoid-non-const-global-variables                     warning               1
+misleading-indentation                               warning               1
+non-const-parameter                                  warning               1
+pro-bounds-array-to-pointer-decay                    warning               1
+pro-type-vararg                                      warning               1
+return-braced-init-list                              warning               1
+str34-c                                              warning               1
+----------------------------------------------------------------------------
+
+
+
+Qodana - Detailed summary
+Analysis results: 86 problems detected
+By severity: warning - 86
+----------------------------------------------------------------------------
+Name                                                Severity  Problems count
+----------------------------------------------------------------------------
+owning-memory                                        warning               8
+use-nodiscard                                        warning               7
+init-variables                                       warning               6
+convert-member-functions-to-static                   warning               5
+avoid-c-arrays                                       warning               4
+default-arguments                                    warning               4
+explicit-constructor                                 warning               4
+use-auto                                             warning               4
+use-nullptr                                          warning               4
+pro-bounds-constant-array-index                      warning               3
+pro-bounds-pointer-arithmetic                        warning               3
+pro-type-const-cast                                  warning               3
+avoid-bind                                           warning               2
+avoid-const-or-ref-data-members                      warning               2
+avoid-goto                                           warning               2
+loop-convert                                         warning               2
+macro-to-enum                                        warning               2
+pass-by-value                                        warning               2
+prefer-member-initializer                            warning               2
+pro-type-reinterpret-cast                            warning               2
+redundant-void-arg                                   warning               2
+runtime-operator                                     warning               2
+special-member-functions                             warning               2
+use-equals-default                                   warning               2
+avoid-non-const-global-variables                     warning               1
+misleading-indentation                               warning               1
+non-const-parameter                                  warning               1
+pro-bounds-array-to-pointer-decay                    warning               1
+pro-type-vararg                                      warning               1
+return-braced-init-list                              warning               1
+str34-c                                              warning               1
+----------------------------------------------------------------------------
+
+
+
+Qodana - Detailed summary
+Analysis results: 86 problems detected
+By severity: warning - 86
+----------------------------------------------------------------------------
+Name                                                Severity  Problems count
+----------------------------------------------------------------------------
+owning-memory                                        warning               8
+use-nodiscard                                        warning               7
+init-variables                                       warning               6
+convert-member-functions-to-static                   warning               5
+avoid-c-arrays                                       warning               4
+default-arguments                                    warning               4
+explicit-constructor                                 warning               4
+use-auto                                             warning               4
+use-nullptr                                          warning               4
+pro-bounds-constant-array-index                      warning               3
+pro-bounds-pointer-arithmetic                        warning               3
+pro-type-const-cast                                  warning               3
+avoid-bind                                           warning               2
+avoid-const-or-ref-data-members                      warning               2
+avoid-goto                                           warning               2
+loop-convert                                         warning               2
+macro-to-enum                                        warning               2
+pass-by-value                                        warning               2
+prefer-member-initializer                            warning               2
+pro-type-reinterpret-cast                            warning               2
+redundant-void-arg                                   warning               2
+runtime-operator                                     warning               2
+special-member-functions                             warning               2
+use-equals-default                                   warning               2
+avoid-non-const-global-variables                     warning               1
+misleading-indentation                               warning               1
+non-const-parameter                                  warning               1
+pro-bounds-array-to-pointer-decay                    warning               1
+pro-type-vararg                                      warning               1
+return-braced-init-list                              warning               1
+str34-c                                              warning               1
+----------------------------------------------------------------------------
+
+

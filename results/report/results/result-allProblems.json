@@ -1,0 +1,2667 @@
+{"version":"3","listProblem":[{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "init-variables",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "variable 'cl1' is not initialized",
+  "detailsInfo": "init-variables",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 12,
+      "offset": 11,
+      "length": 3,
+      "code": {
+        "startLine": 10,
+        "length": 3,
+        "offset": 46,
+        "surroundingCode": "\nvoid do_shadow_color(int shadow) {\n    Color cl1, cl2;\n\n    if (shadow)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-init-variables"
+  },
+  "hash": "4869b6b95f46813f8aed96b57e08a3f040bfbb8f4addba9a5ca8d2d69f75c8eb"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "init-variables",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "variable 'cl2' is not initialized",
+  "detailsInfo": "init-variables",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 12,
+      "offset": 16,
+      "length": 3,
+      "code": {
+        "startLine": 10,
+        "length": 3,
+        "offset": 51,
+        "surroundingCode": "\nvoid do_shadow_color(int shadow) {\n    Color cl1, cl2;\n\n    if (shadow)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-init-variables"
+  },
+  "hash": "2b589779cfd516ffbbb4a5d86679a616f99379b6f1c19b0b748f6772c52cb467"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "init-variables",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "variable 'c' is not initialized",
+  "detailsInfo": "init-variables",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 27,
+      "offset": 11,
+      "length": 1,
+      "code": {
+        "startLine": 25,
+        "length": 1,
+        "offset": 36,
+        "surroundingCode": "\nvoid Sample2(int flag) {\n    Color c;\n\n    switch (flag) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-init-variables"
+  },
+  "hash": "aab2d272fed10fe25f45d95655d150d56c858038a04e622db000771468cf848e"
+},{
+  "tool": "Code Inspection",
+  "category": "readability",
+  "type": "convert-member-functions-to-static",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "method 'getSpeedX' can be made static",
+  "detailsInfo": "convert-member-functions-to-static",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 78,
+      "offset": 9,
+      "length": 9,
+      "code": {
+        "startLine": 76,
+        "length": 9,
+        "offset": 29,
+        "surroundingCode": "class Ball {\npublic:\n    int getSpeedX() { return 0; }\n    int getSpeedY() { return 0; }\n};"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "readability-convert-member-functions-to-static"
+  },
+  "hash": "1fe9930cc4f7eac7f753d67d9012ab47fb296e43de658c74199f8271a3c164d9"
+},{
+  "tool": "Code Inspection",
+  "category": "readability",
+  "type": "convert-member-functions-to-static",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "method 'getSpeedY' can be made static",
+  "detailsInfo": "convert-member-functions-to-static",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 79,
+      "offset": 9,
+      "length": 9,
+      "code": {
+        "startLine": 77,
+        "length": 9,
+        "offset": 50,
+        "surroundingCode": "public:\n    int getSpeedX() { return 0; }\n    int getSpeedY() { return 0; }\n};\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "readability-convert-member-functions-to-static"
+  },
+  "hash": "25d5312fc46204eb189915a4deb80d82ed10d517731daec790e4103d6bd8fec1"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "prefer-member-initializer",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "'head' should be initialized in a member initializer of the constructor",
+  "detailsInfo": "prefer-member-initializer",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 161,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 159,
+        "length": 4,
+        "offset": 32,
+        "surroundingCode": "    linked_list()\n    {\n        head = nullptr;\n        tail = nullptr;\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-prefer-member-initializer"
+  },
+  "hash": "8f48e1e03be854cb53ae705836ef760f5fb825a47bad0d3ec2093970f9dc5a47"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "prefer-member-initializer",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "'tail' should be initialized in a member initializer of the constructor",
+  "detailsInfo": "prefer-member-initializer",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 162,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 160,
+        "length": 4,
+        "offset": 38,
+        "surroundingCode": "    {\n        head = nullptr;\n        tail = nullptr;\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-prefer-member-initializer"
+  },
+  "hash": "26ee63ae21342f8032778a702772406616dafcf3989cdb0ff64be210b323f1e8"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "initializing non-owner 'node *' with a newly created 'gsl::owner<>'",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 171,
+      "offset": 5,
+      "length": 4,
+      "code": {
+        "startLine": 169,
+        "length": 4,
+        "offset": 40,
+        "surroundingCode": "void linked_list::add_node(int n)\n{\n    node *tmp = new node;\n    tmp->data = n;\n    tmp->next = nullptr;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "83e4e64f63c91b21ea9a5b0bf59332d55189f8f78b4b520e89701f25c004f610"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 189,
+      "offset": 9,
+      "length": 6,
+      "code": {
+        "startLine": 187,
+        "length": 6,
+        "offset": 96,
+        "surroundingCode": "void linked_list::process() {\n    for (node *pt = head; pt != nullptr; pt = pt->next) {\n        delete pt;\n    }\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "8c1231bcc5a561b3abb1db39ef3157d79a905141e94368cad0b863977f049b3b"
+},{
+  "tool": "Code Inspection",
+  "category": "readability",
+  "type": "convert-member-functions-to-static",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "method 'foo' can be made static",
+  "detailsInfo": "convert-member-functions-to-static",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 223,
+      "offset": 10,
+      "length": 3,
+      "code": {
+        "startLine": 221,
+        "length": 3,
+        "offset": 24,
+        "surroundingCode": "\nclass Deref {\n    int* foo() {\n        return nullptr;\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "readability-convert-member-functions-to-static"
+  },
+  "hash": "7b085e11aac7cf53dc15bf17f0ea572dd841515d7b9e6f1b7c2bf5a029b011f1"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-bounds-pointer-arithmetic",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use pointer arithmetic",
+  "detailsInfo": "pro-bounds-pointer-arithmetic",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 230,
+      "offset": 9,
+      "length": 6,
+      "code": {
+        "startLine": 228,
+        "length": 6,
+        "offset": 54,
+        "surroundingCode": "    void bar() {\n        int* buffer = foo();\n        buffer[0] = 0;\n    }\n};"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-bounds-pointer-arithmetic"
+  },
+  "hash": "3247f55b7e04e8eb4301afd8d4a6269137c8d78daea7f0aaeb3ea7c0901f7eb3"
+},{
+  "tool": "Code Inspection",
+  "category": "readability",
+  "type": "non-const-parameter",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "pointer parameter 'ptr' can be pointer to const",
+  "detailsInfo": "non-const-parameter",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 254,
+      "offset": 29,
+      "length": 3,
+      "code": {
+        "startLine": 252,
+        "length": 3,
+        "offset": 49,
+        "surroundingCode": "// Dangling pointer\n\nstatic void delete_ptr(int* ptr) {\n    delete ptr;\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "readability-non-const-parameter"
+  },
+  "hash": "10bbf572551625e9854b6c2536f2fcbfaf11bb15cc90883f9188a18560db841f"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 255,
+      "offset": 5,
+      "length": 6,
+      "code": {
+        "startLine": 253,
+        "length": 6,
+        "offset": 40,
+        "surroundingCode": "\nstatic void delete_ptr(int* ptr) {\n    delete ptr;\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "fc736f81eda2eadb69a33dbbfc04da73dd701303c9972e8154b31d8601803bfb"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "initializing non-owner 'int *' with a newly created 'gsl::owner<>'",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 259,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 257,
+        "length": 3,
+        "offset": 28,
+        "surroundingCode": "\nint handle_pointer() {\n    int* int_ptr = new int;\n\n    delete_ptr(int_ptr);"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "331d38f925e00026fd2e5d3f5d58aef1f57c93325851867028589f668c17d111"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-non-const-global-variables",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "variable 'nextState' is non-const and globally accessible, consider making it const",
+  "detailsInfo": "avoid-non-const-global-variables",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 278,
+      "offset": 7,
+      "length": 9,
+      "code": {
+        "startLine": 276,
+        "length": 9,
+        "offset": 44,
+        "surroundingCode": "void log_msg(const char *message) {}\n\nState nextState;\n\nstatic void setState(State state) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-non-const-global-variables"
+  },
+  "hash": "9fd7078cf541ead837117bae717c3a47c9bf4fc22fbb65327d3bb065329d5cef"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-c-arrays",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not declare C-style arrays, use std::array<> instead",
+  "detailsInfo": "avoid-c-arrays",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 307,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 305,
+        "length": 3,
+        "offset": 20,
+        "surroundingCode": "\nvoid aioob() {\n    int buffer[100];\n\n    for (int i = 0; i <= 100; i++)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-c-arrays"
+  },
+  "hash": "c85632883e822c0679a3e21ffe9127210ff0358ffcbbe9888e175a60bb7a27a6"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-bounds-constant-array-index",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use array subscript when the index is not an integer constant expression",
+  "detailsInfo": "pro-bounds-constant-array-index",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 310,
+      "offset": 9,
+      "length": 6,
+      "code": {
+        "startLine": 308,
+        "length": 6,
+        "offset": 44,
+        "surroundingCode": "\n    for (int i = 0; i <= 100; i++)\n        buffer[i] = 0; // buffer overflow when i is equal to 100\n\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-bounds-constant-array-index"
+  },
+  "hash": "29f376b26f7718c12fb834fd323f0eb9d558634479a62780a5c895a64eba3fff"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-bounds-constant-array-index",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "std::array<> index 3 is past the end of the array (which contains 3 elements)",
+  "detailsInfo": "pro-bounds-constant-array-index",
+  "sources": [
+    {
+      "type": "file",
+      "path": "DFAchecks.cpp",
+      "language": "",
+      "line": 314,
+      "offset": 5,
+      "length": 1,
+      "code": {
+        "startLine": 312,
+        "length": 1,
+        "offset": 43,
+        "surroundingCode": "\n    std::array<int, 3> a = {1, 2, 3};\n    a[a.size()] = 4; // a overflow when index is equal to a.size()\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-bounds-constant-array-index"
+  },
+  "hash": "6d1b8613597f9b37f3180dfcfa5cb075492f2c2fb459aef67a5f53ecedf26d62"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-c-arrays",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not declare C-style arrays, use std::array<> instead",
+  "detailsInfo": "avoid-c-arrays",
+  "sources": [
+    {
+      "type": "file",
+      "path": "lifetime_safety_samples.cpp",
+      "language": "",
+      "line": 33,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 31,
+        "length": 4,
+        "offset": 38,
+        "surroundingCode": "    std::string_view s;\n    {\n        char a[100];\n        s = a;\n        std::cout << s[0];"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-c-arrays"
+  },
+  "hash": "a8c25daf688c92c2405a5ddeee3f10267f084b97f8e365bc8860c953a403e9bf"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-bounds-array-to-pointer-decay",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead",
+  "detailsInfo": "pro-bounds-array-to-pointer-decay",
+  "sources": [
+    {
+      "type": "file",
+      "path": "lifetime_safety_samples.cpp",
+      "language": "",
+      "line": 34,
+      "offset": 13,
+      "length": 1,
+      "code": {
+        "startLine": 32,
+        "length": 1,
+        "offset": 39,
+        "surroundingCode": "    {\n        char a[100];\n        s = a;\n        std::cout << s[0];\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-bounds-array-to-pointer-decay"
+  },
+  "hash": "dfc940da9912e1e9048ae5299dc7618572aa58c25cd0a564acd57a952910912e"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "init-variables",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "variable 'ptr' is not initialized",
+  "detailsInfo": "init-variables",
+  "sources": [
+    {
+      "type": "file",
+      "path": "lifetime_safety_samples.cpp",
+      "language": "",
+      "line": 53,
+      "offset": 17,
+      "length": 3,
+      "code": {
+        "startLine": 51,
+        "length": 3,
+        "offset": 34,
+        "surroundingCode": "\nvoid sample6() {\n    const char *ptr;\n\n    {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-init-variables"
+  },
+  "hash": "6c678295c061cc8c845aafd0f2518817f9b2a8c3c0e3e5d7f45592f9a3e04380"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "explicit-constructor",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "single-argument constructors must be marked explicit to avoid unintentional implicit conversions",
+  "detailsInfo": "explicit-constructor",
+  "sources": [
+    {
+      "type": "file",
+      "path": "lifetime_safety_samples.cpp",
+      "language": "",
+      "line": 85,
+      "offset": 5,
+      "length": 12,
+      "code": {
+        "startLine": 83,
+        "length": 12,
+        "offset": 51,
+        "surroundingCode": "};\nstruct [[gsl::Pointer(int)]] MyIntPointer {\n    MyIntPointer(int *p = nullptr);\n    MyIntPointer(const MyIntOwner &);\n    int &operator*();"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-explicit-constructor"
+  },
+  "hash": "a5c1f262f5ad8acbe24c1065f744668eecb627b93949b735a319c99d550cae8f"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "explicit-constructor",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "single-argument constructors must be marked explicit to avoid unintentional implicit conversions",
+  "detailsInfo": "explicit-constructor",
+  "sources": [
+    {
+      "type": "file",
+      "path": "lifetime_safety_samples.cpp",
+      "language": "",
+      "line": 86,
+      "offset": 5,
+      "length": 12,
+      "code": {
+        "startLine": 84,
+        "length": 12,
+        "offset": 84,
+        "surroundingCode": "struct [[gsl::Pointer(int)]] MyIntPointer {\n    MyIntPointer(int *p = nullptr);\n    MyIntPointer(const MyIntOwner &);\n    int &operator*();\n    MyIntOwner toOwner();"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-explicit-constructor"
+  },
+  "hash": "4e3bab63807367300dc30bfdb9fe2a55d7621acdd9ffc8befd83867dce43527a"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "macro-to-enum",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "replace macro with enum",
+  "detailsInfo": "macro-to-enum",
+  "sources": [
+    {
+      "type": "file",
+      "path": "MISRA_inspections.cpp",
+      "language": "",
+      "line": 20,
+      "offset": 1,
+      "length": 1,
+      "code": {
+        "startLine": 18,
+        "length": 1,
+        "offset": 2,
+        "surroundingCode": "\n\n#define SHIFT_8 8\n\nunsigned char func(unsigned char num) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-macro-to-enum"
+  },
+  "hash": "ac9129d556f40d3b57e81c3f788befb833fc431229476749b364773739db9d99"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "macro-to-enum",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "macro 'SHIFT_8' defines an integral constant; prefer an enum instead",
+  "detailsInfo": "macro-to-enum",
+  "sources": [
+    {
+      "type": "file",
+      "path": "MISRA_inspections.cpp",
+      "language": "",
+      "line": 20,
+      "offset": 9,
+      "length": 7,
+      "code": {
+        "startLine": 18,
+        "length": 7,
+        "offset": 10,
+        "surroundingCode": "\n\n#define SHIFT_8 8\n\nunsigned char func(unsigned char num) {"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-macro-to-enum"
+  },
+  "hash": "fc4b5987fac009d98415e5e88392b4bedcaa32e9db815f24b8ee5e7a8c94daae"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-c-arrays",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not declare C-style arrays, use std::array<> instead",
+  "detailsInfo": "avoid-c-arrays",
+  "sources": [
+    {
+      "type": "file",
+      "path": "MISRA_inspections.cpp",
+      "language": "",
+      "line": 27,
+      "offset": 5,
+      "length": 7,
+      "code": {
+        "startLine": 25,
+        "length": 7,
+        "offset": 45,
+        "surroundingCode": "\nvoid discarded(unsigned char counter) {\n    int32_t code[5];\n    code[0] = 109;\n    code[1] = 100;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-c-arrays"
+  },
+  "hash": "54979eecb5f096d14fa359afacda818aa986bedcbd1b623f4adb0327a0af65d6"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nullptr",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use nullptr",
+  "detailsInfo": "use-nullptr",
+  "sources": [
+    {
+      "type": "file",
+      "path": "MISRA_inspections.cpp",
+      "language": "",
+      "line": 51,
+      "offset": 17,
+      "length": 1,
+      "code": {
+        "startLine": 49,
+        "length": 1,
+        "offset": 34,
+        "surroundingCode": "\nvoid operate() {\n    process_ptr(0);\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nullptr"
+  },
+  "hash": "32bff4000da36f6c8828f62c1158abfdab6e57b40ee3ca49363f46837d572c8d"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "runtime-operator",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not overload unary operator&, it is dangerous.",
+  "detailsInfo": "runtime-operator",
+  "sources": [
+    {
+      "type": "file",
+      "path": "MISRA_inspections.cpp",
+      "language": "",
+      "line": 56,
+      "offset": 5,
+      "length": 7,
+      "code": {
+        "startLine": 54,
+        "length": 7,
+        "offset": 28,
+        "surroundingCode": "class OpClass {\npublic:\n    OpClass *operator&() {};\n};\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-runtime-operator"
+  },
+  "hash": "623bf25224d3bb1025f6cfa407b1ff78d5cf386e761bc36bafd9099ac1e9cb53"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "explicit-constructor",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "single-argument constructors must be marked explicit to avoid unintentional implicit conversions",
+  "detailsInfo": "explicit-constructor",
+  "sources": [
+    {
+      "type": "file",
+      "path": "MISRA_inspections.cpp",
+      "language": "",
+      "line": 61,
+      "offset": 5,
+      "length": 13,
+      "code": {
+        "startLine": 59,
+        "length": 13,
+        "offset": 34,
+        "surroundingCode": "class MySingleCLass {\npublic:\n    MySingleCLass(int32_t a) {}\n};\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-explicit-constructor"
+  },
+  "hash": "38e244a278904687ca909e6433d9bd9e66a06b2056d3d0906c9592b6a5e37f04"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-bounds-pointer-arithmetic",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use pointer arithmetic",
+  "detailsInfo": "pro-bounds-pointer-arithmetic",
+  "sources": [
+    {
+      "type": "file",
+      "path": "MISRA_inspections.cpp",
+      "language": "",
+      "line": 76,
+      "offset": 8,
+      "length": 2,
+      "code": {
+        "startLine": 74,
+        "length": 2,
+        "offset": 35,
+        "surroundingCode": "\nbool modify(int32_t *pX) {\n    *pX++;\n    return *pX < 10;\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-bounds-pointer-arithmetic"
+  },
+  "hash": "889a8c0202a96985344e076dc950c8953aa617475ebf1e7e8f17ebac13e3a9a9"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "avoid-bind",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "prefer a lambda to std::bind",
+  "detailsInfo": "avoid-bind",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_modernize.cpp",
+      "language": "",
+      "line": 17,
+      "offset": 16,
+      "length": 3,
+      "code": {
+        "startLine": 15,
+        "length": 3,
+        "offset": 61,
+        "surroundingCode": "void bind_to_lambda(int num) {\n    int x = 2;\n    auto clj = std::bind(add, x, num);\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-avoid-bind"
+  },
+  "hash": "38319bed584c9d1ce0611f605de12b9c4849f5b607d6477ca1075dba2a255067"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "loop-convert",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use range-based for loop instead",
+  "detailsInfo": "loop-convert",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_modernize.cpp",
+      "language": "",
+      "line": 21,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 19,
+        "length": 3,
+        "offset": 54,
+        "surroundingCode": "\nvoid loop_convert(const std::vector<int>& vec) {\n    for(auto iter = vec.begin(); iter != vec.end(); ++iter) {\n        std::cout << *iter;\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-loop-convert"
+  },
+  "hash": "2c690a4588008c2d4c730244981512d5ce168f30d31b772178ed5e161bb3bdb5"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "pass-by-value",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "pass by value and use std::move",
+  "detailsInfo": "pass-by-value",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_modernize.cpp",
+      "language": "",
+      "line": 28,
+      "offset": 13,
+      "length": 5,
+      "code": {
+        "startLine": 26,
+        "length": 5,
+        "offset": 36,
+        "surroundingCode": "class myClass {\npublic:\n    myClass(const std::string &Copied,\n            const std::string &ReadOnly)\n            : Copied(Copied), ReadOnly(ReadOnly) {}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-pass-by-value"
+  },
+  "hash": "b07fa1a74781f3664b8096fea66ad692d7d1a5584e56cd31ef3b30ee82dffd11"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-const-or-ref-data-members",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string &') is a reference",
+  "detailsInfo": "avoid-const-or-ref-data-members",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_modernize.cpp",
+      "language": "",
+      "line": 34,
+      "offset": 24,
+      "length": 8,
+      "code": {
+        "startLine": 32,
+        "length": 8,
+        "offset": 56,
+        "surroundingCode": "private:\n    std::string Copied;\n    const std::string &ReadOnly;\n};\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-const-or-ref-data-members"
+  },
+  "hash": "b06f1e4b797d55b39b54101b3aff2451214f713cbd059c1609010f4d950a3c73"
+},{
+  "tool": "Code Inspection",
+  "category": "cert",
+  "type": "str34-c",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "'signed char' to 'int' conversion; consider casting to 'unsigned char' first.",
+  "detailsInfo": "str34-c",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_google.cpp",
+      "language": "",
+      "line": 7,
+      "offset": 22,
+      "length": 2,
+      "code": {
+        "startLine": 5,
+        "length": 2,
+        "offset": 81,
+        "surroundingCode": "void avoid_c_style_cast(char ch, double d, long long lng)\n{\n    int my_ch = (int)ch;\n    int my_d = (int)d;\n    int my_lng = (int)lng;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cert-str34-c"
+  },
+  "hash": "268f4286d153ab369539f2cc60cfb29031f500a9d660055427754e0a44fb0a3a"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "explicit-constructor",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "single-argument constructors must be marked explicit to avoid unintentional implicit conversions",
+  "detailsInfo": "explicit-constructor",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_google.cpp",
+      "language": "",
+      "line": 15,
+      "offset": 9,
+      "length": 8,
+      "code": {
+        "startLine": 13,
+        "length": 8,
+        "offset": 41,
+        "surroundingCode": "    class My_Class {\n    public:\n        My_Class(int x) :x(x) {\n\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-explicit-constructor"
+  },
+  "hash": "e4626b4b1ca0d94c6d9d6c08a992ebd6327238904d111be501abaf2695992edf"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "runtime-operator",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not overload unary operator&, it is dangerous.",
+  "detailsInfo": "runtime-operator",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_google.cpp",
+      "language": "",
+      "line": 18,
+      "offset": 9,
+      "length": 8,
+      "code": {
+        "startLine": 16,
+        "length": 8,
+        "offset": 19,
+        "surroundingCode": "\n        }\n        My_Class* operator&() {\n            return this;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-runtime-operator"
+  },
+  "hash": "6ce077d02ee36a0694d2ea36614100256fb4cad52098b959cb9128cdda668ac0"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nodiscard",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "function 'someMethod' should be marked [[nodiscard]]",
+  "detailsInfo": "use-nodiscard",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_google.cpp",
+      "language": "",
+      "line": 29,
+      "offset": 5,
+      "length": 7,
+      "code": {
+        "startLine": 27,
+        "length": 7,
+        "offset": 14,
+        "surroundingCode": "{\npublic:\n    virtual int someMethod(const int x, const int factor = 1) const\n    {\n        return 42 * x * x * factor;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nodiscard"
+  },
+  "hash": "68ddc2649285cd71d3060edf7cbb3d5be26bb7e6d0d7e0979d732703a9465e85"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "default-arguments",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "default arguments on virtual or override methods are prohibited",
+  "detailsInfo": "default-arguments",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_google.cpp",
+      "language": "",
+      "line": 29,
+      "offset": 17,
+      "length": 10,
+      "code": {
+        "startLine": 27,
+        "length": 10,
+        "offset": 26,
+        "surroundingCode": "{\npublic:\n    virtual int someMethod(const int x, const int factor = 1) const\n    {\n        return 42 * x * x * factor;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-default-arguments"
+  },
+  "hash": "aa1affebd6709d26d245c286b1c6e4a890852c4f58e8966a491f5eba3129c1c0"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nodiscard",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "function 'someMethod' should be marked [[nodiscard]]",
+  "detailsInfo": "use-nodiscard",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_google.cpp",
+      "language": "",
+      "line": 37,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 35,
+        "length": 3,
+        "offset": 14,
+        "surroundingCode": "{\npublic:\n    int someMethod(const int x, const int factor = 0) const override\n    {\n        return x * x * factor;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nodiscard"
+  },
+  "hash": "511f9619378fc7d4cdfcd192c67ef0047978ab69769701cdd8316c131f5ac3a0"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "default-arguments",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "default arguments on virtual or override methods are prohibited",
+  "detailsInfo": "default-arguments",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_google.cpp",
+      "language": "",
+      "line": 37,
+      "offset": 9,
+      "length": 10,
+      "code": {
+        "startLine": 35,
+        "length": 10,
+        "offset": 18,
+        "surroundingCode": "{\npublic:\n    int someMethod(const int x, const int factor = 0) const override\n    {\n        return x * x * factor;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-default-arguments"
+  },
+  "hash": "7f070ad900138296600fddb97e30e13673d02002a3591ec1ae90ecbd2d4a9c22"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-bounds-pointer-arithmetic",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use pointer arithmetic",
+  "detailsInfo": "pro-bounds-pointer-arithmetic",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_cppcoreguidelines.cpp",
+      "language": "",
+      "line": 7,
+      "offset": 9,
+      "length": 3,
+      "code": {
+        "startLine": 5,
+        "length": 3,
+        "offset": 88,
+        "surroundingCode": "void fill_pointer(int* arr, const int num) {\n    for(int i = 0; i < num; ++i) {\n        arr[i] = 0;\n    }\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-bounds-pointer-arithmetic"
+  },
+  "hash": "ba1542be1696259436d8b1e8f66f365a2299f9e2952839b378104ff76f5c7256"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-c-arrays",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not declare C-style arrays, use std::array<> instead",
+  "detailsInfo": "avoid-c-arrays",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_cppcoreguidelines.cpp",
+      "language": "",
+      "line": 12,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 10,
+        "length": 3,
+        "offset": 32,
+        "surroundingCode": "\nvoid fill_array(int ind) {\n    int arr[3] = {1,2,3};\n    arr[ind] = 0;\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-c-arrays"
+  },
+  "hash": "afee7319b7ace03e15408947350adc912b9d136d1ab94bac0a5a31cdac5d2a0d"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-bounds-constant-array-index",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use array subscript when the index is not an integer constant expression",
+  "detailsInfo": "pro-bounds-constant-array-index",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_cppcoreguidelines.cpp",
+      "language": "",
+      "line": 13,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 11,
+        "length": 3,
+        "offset": 57,
+        "surroundingCode": "void fill_array(int ind) {\n    int arr[3] = {1,2,3};\n    arr[ind] = 0;\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-bounds-constant-array-index"
+  },
+  "hash": "80254f3d86830a92b1909fa0d4f4ff396bd40c2c6f359aab2f53a97865835555"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-type-const-cast",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use const_cast to remove const qualifier",
+  "detailsInfo": "pro-type-const-cast",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_cppcoreguidelines.cpp",
+      "language": "",
+      "line": 18,
+      "offset": 5,
+      "length": 10,
+      "code": {
+        "startLine": 16,
+        "length": 10,
+        "offset": 49,
+        "surroundingCode": "void cast_away_const(const int& magic_num)\n{\n    const_cast<int&>(magic_num) = 42;\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-type-const-cast"
+  },
+  "hash": "5f7285a6e43944483d84badb5b04fb6d19253621fdd29678d66e01a1f2d8a389"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "special-member-functions",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator",
+  "detailsInfo": "special-member-functions",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 6,
+      "offset": 8,
+      "length": 4,
+      "code": {
+        "startLine": 4,
+        "length": 4,
+        "offset": 48,
+        "surroundingCode": "enum class Num { ONE = 1, TWO, THREE };\n\nstruct Base {\n    virtual ~Base() {}\n};"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-special-member-functions"
+  },
+  "hash": "2dad5850e7698648f7db2751584c7f69cf40d71a6444525acb8701d5dd7a6ff1"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-equals-default",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use '= default' to define a trivial destructor",
+  "detailsInfo": "use-equals-default",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 7,
+      "offset": 13,
+      "length": 1,
+      "code": {
+        "startLine": 5,
+        "length": 1,
+        "offset": 27,
+        "surroundingCode": "\nstruct Base {\n    virtual ~Base() {}\n};\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-equals-default"
+  },
+  "hash": "030ecc0215fb6503e12a0e7eb84d21ef4ee96e8cd1793d3e64944658fa3b46fe"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "initializing non-owner 'Base *' with a newly created 'gsl::owner<>'",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 22,
+      "offset": 5,
+      "length": 4,
+      "code": {
+        "startLine": 20,
+        "length": 4,
+        "offset": 34,
+        "surroundingCode": "\nvoid dynamic_cast_sample() {\n    Base *b = new Base;\n    if (Derived *d = dynamic_cast<Derived *>(b)) {\n        d->name();"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "8132f6ccc54acd1d80b9dd5bf261bf3e41f1d8cf59a83aadfc54ff39b634a5d7"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-auto",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use auto when initializing with a cast to avoid duplicating the type name",
+  "detailsInfo": "use-auto",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 23,
+      "offset": 9,
+      "length": 7,
+      "code": {
+        "startLine": 21,
+        "length": 7,
+        "offset": 61,
+        "surroundingCode": "void dynamic_cast_sample() {\n    Base *b = new Base;\n    if (Derived *d = dynamic_cast<Derived *>(b)) {\n        d->name();\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-auto"
+  },
+  "hash": "0d3f95c5e59cac879a462a54869a032bb7e27afcbdbcc67b7fd45e2acc360a00"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-auto",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use auto when initializing with a cast to avoid duplicating the type name",
+  "detailsInfo": "use-auto",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 29,
+      "offset": 5,
+      "length": 4,
+      "code": {
+        "startLine": 27,
+        "length": 4,
+        "offset": 38,
+        "surroundingCode": "\nvoid reinterpret_cast_sample() {\n    void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-auto"
+  },
+  "hash": "5d028d29358af39bfd612c350e0eec9b1d6138463328f358d66d4737e789f1c1"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-type-reinterpret-cast",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use reinterpret_cast",
+  "detailsInfo": "pro-type-reinterpret-cast",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 29,
+      "offset": 29,
+      "length": 16,
+      "code": {
+        "startLine": 27,
+        "length": 16,
+        "offset": 62,
+        "surroundingCode": "\nvoid reinterpret_cast_sample() {\n    void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-type-reinterpret-cast"
+  },
+  "hash": "bbfe777f7ab394c8456c2eb2b22a3faddfa91437911f1546a0a46f7e90df57f2"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "redundant-void-arg",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "redundant void argument list in named cast",
+  "detailsInfo": "redundant-void-arg",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 29,
+      "offset": 55,
+      "length": 4,
+      "code": {
+        "startLine": 27,
+        "length": 4,
+        "offset": 88,
+        "surroundingCode": "\nvoid reinterpret_cast_sample() {\n    void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-redundant-void-arg"
+  },
+  "hash": "22f55f985dcf20ec7712495c1ed467a2b163d3c09d01ad4969baa4d612081a7e"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-type-const-cast",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use const_cast to remove const qualifier",
+  "detailsInfo": "pro-type-const-cast",
+  "sources": [
+    {
+      "type": "file",
+      "path": "cppcast_quickfixes.cpp",
+      "language": "",
+      "line": 34,
+      "offset": 15,
+      "length": 10,
+      "code": {
+        "startLine": 32,
+        "length": 10,
+        "offset": 63,
+        "surroundingCode": "void const_cast_sample() {\n    const int j = 42;\n    int* pj = const_cast<int *>(&j);\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-type-const-cast"
+  },
+  "hash": "b75b1fad41eb381bc159d8bc0c9fe8bd1964b6d1c7f374b542c3519ec078ef83"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-goto",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "avoid using 'goto' for flow control",
+  "detailsInfo": "avoid-goto",
+  "sources": [
+    {
+      "type": "file",
+      "path": "GoToFail.cpp",
+      "language": "",
+      "line": 9,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 7,
+        "length": 4,
+        "offset": 42,
+        "surroundingCode": "        return 7;\n    if (x == 8)\n        goto fail;\n        goto fail;\n    if (x == 7)"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-goto"
+  },
+  "hash": "ea59ee0d4c79c4bf7cdb7e58527f0801f4369b60a7c5032d961459518b224b53"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-goto",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "avoid using 'goto' for flow control",
+  "detailsInfo": "avoid-goto",
+  "sources": [
+    {
+      "type": "file",
+      "path": "GoToFail.cpp",
+      "language": "",
+      "line": 10,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 8,
+        "length": 4,
+        "offset": 43,
+        "surroundingCode": "    if (x == 8)\n        goto fail;\n        goto fail;\n    if (x == 7)\n        return 8;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-goto"
+  },
+  "hash": "b6d5a45e0c70cf65059f54d049573e7c1d8ec26ea6951e725ef5e6efbbf1ec0f"
+},{
+  "tool": "Code Inspection",
+  "category": "readability",
+  "type": "misleading-indentation",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "misleading indentation: statement is indented too deeply",
+  "detailsInfo": "misleading-indentation",
+  "sources": [
+    {
+      "type": "file",
+      "path": "GoToFail.cpp",
+      "language": "",
+      "line": 10,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 8,
+        "length": 4,
+        "offset": 43,
+        "surroundingCode": "    if (x == 8)\n        goto fail;\n        goto fail;\n    if (x == 7)\n        return 8;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "readability-misleading-indentation"
+  },
+  "hash": "8aa38a62942ced3fed6bce49919a8235d850ce6dcbda7271a3ea568ce30e7978"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nullptr",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use nullptr",
+  "detailsInfo": "use-nullptr",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_options.cpp",
+      "language": "",
+      "line": 11,
+      "offset": 18,
+      "length": 4,
+      "code": {
+        "startLine": 9,
+        "length": 4,
+        "offset": 38,
+        "surroundingCode": "\nvoid assignment() {\n    char *var1 = NULL;\n    char *var2 = 0;\n    char var3 = 0;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nullptr"
+  },
+  "hash": "932f719a8e491b77f2806230e35e01f0ba468e9cfaaa35316e06364b9f784764"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nullptr",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use nullptr",
+  "detailsInfo": "use-nullptr",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_options.cpp",
+      "language": "",
+      "line": 12,
+      "offset": 18,
+      "length": 1,
+      "code": {
+        "startLine": 10,
+        "length": 1,
+        "offset": 60,
+        "surroundingCode": "void assignment() {\n    char *var1 = NULL;\n    char *var2 = 0;\n    char var3 = 0;\n}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nullptr"
+  },
+  "hash": "fa5db67fd61b92c79b1f903d98417b20c3cba40dbf5ae301a93c718e4eaa9e7d"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nullptr",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use nullptr",
+  "detailsInfo": "use-nullptr",
+  "sources": [
+    {
+      "type": "file",
+      "path": "Clang_Tidy_options.cpp",
+      "language": "",
+      "line": 19,
+      "offset": 12,
+      "length": 1,
+      "code": {
+        "startLine": 17,
+        "length": 1,
+        "offset": 22,
+        "surroundingCode": "    //...\n\n    return 0;\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nullptr"
+  },
+  "hash": "b861ca667c23c7044a955bf14ed1834ee99ad77362c620d648a4b01e994fc938"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nodiscard",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "function 'getWidth' should be marked [[nodiscard]]",
+  "detailsInfo": "use-nodiscard",
+  "sources": [
+    {
+      "type": "file",
+      "path": "argument_selection_inspection.cpp",
+      "language": "",
+      "line": 14,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 12,
+        "length": 3,
+        "offset": 58,
+        "surroundingCode": "    Rectangle(int w, int h) : width(w), height(h) {}\n\n    int getWidth() const {\n        return width;\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nodiscard"
+  },
+  "hash": "325959a24f78bf8765d0acbbd6b876b57ea8076b3b0d38303f919f9f7faa444d"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nodiscard",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "function 'getHeight' should be marked [[nodiscard]]",
+  "detailsInfo": "use-nodiscard",
+  "sources": [
+    {
+      "type": "file",
+      "path": "argument_selection_inspection.cpp",
+      "language": "",
+      "line": 18,
+      "offset": 5,
+      "length": 3,
+      "code": {
+        "startLine": 16,
+        "length": 3,
+        "offset": 11,
+        "surroundingCode": "    }\n\n    int getHeight() const {\n        return height;\n    }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nodiscard"
+  },
+  "hash": "7ef66763410a617855de5d32980357ec7ea7fe9b7db9bc5afe46977d0d336410"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>'",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "argument_selection_inspection.cpp",
+      "language": "",
+      "line": 37,
+      "offset": 5,
+      "length": 6,
+      "code": {
+        "startLine": 35,
+        "length": 6,
+        "offset": 65,
+        "surroundingCode": "\nconst User* get_User(int64_t company_id, int64_t user_id) {\n    return new User{company_id, user_id, \"foo\"};\n}\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "a6f98bbebc69ef75cce41580d5d140f0e56462da01ab0fc3cde317a31ed2c7d2"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "return-braced-init-list",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "avoid repeating the return type from the declaration; use a braced initializer list instead",
+  "detailsInfo": "return-braced-init-list",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 28,
+      "offset": 32,
+      "length": 4,
+      "code": {
+        "startLine": 26,
+        "length": 4,
+        "offset": 39,
+        "surroundingCode": "    };\n\n    Data CreateData() { return Data(); }\n\n    void ActivateData()"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-return-braced-init-list"
+  },
+  "hash": "342564780c4e31142bdafa580c759d962578496e445f6eb4427184490392adc9"
+},{
+  "tool": "Code Inspection",
+  "category": "readability",
+  "type": "convert-member-functions-to-static",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "method 'activity' can be made static",
+  "detailsInfo": "convert-member-functions-to-static",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 37,
+      "offset": 16,
+      "length": 8,
+      "code": {
+        "startLine": 35,
+        "length": 8,
+        "offset": 39,
+        "surroundingCode": "    int Data::num = 1;\n\n    void Data::activity()\n    {\n        num = 42;"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "readability-convert-member-functions-to-static"
+  },
+  "hash": "363ee3a6592438abb91c2dd50d73a0b95e174d10377a449dbc84059419683018"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-type-vararg",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not call c-style vararg functions",
+  "detailsInfo": "pro-type-vararg",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 67,
+      "offset": 9,
+      "length": 6,
+      "code": {
+        "startLine": 65,
+        "length": 6,
+        "offset": 58,
+        "surroundingCode": "\n    void wrongFormatSpecifiers(int x, char *y) {\n        printf(\"Input param: %s, %d\", x, y);\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-type-vararg"
+  },
+  "hash": "22d57bd1a38ff17a913862aafc2950d12fbbe1b3eb9a78b525f976aab44ecadf"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "special-member-functions",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator",
+  "detailsInfo": "special-member-functions",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 89,
+      "offset": 12,
+      "length": 4,
+      "code": {
+        "startLine": 87,
+        "length": 4,
+        "offset": 19,
+        "surroundingCode": "    };\n\n    struct Base {\n        virtual ~Base() {}\n    };"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-special-member-functions"
+  },
+  "hash": "379d6db075dd662d6ee65a1101fd6720fe4c3c275f14f0de8b35ab0329e00fcc"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-equals-default",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use '= default' to define a trivial destructor",
+  "detailsInfo": "use-equals-default",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 90,
+      "offset": 17,
+      "length": 1,
+      "code": {
+        "startLine": 88,
+        "length": 1,
+        "offset": 35,
+        "surroundingCode": "\n    struct Base {\n        virtual ~Base() {}\n    };\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-equals-default"
+  },
+  "hash": "80eabc40090409a22bf899a11a907810725f1fa700e4f2154cdde7b9aa0d847c"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "initializing non-owner 'Base *' with a newly created 'gsl::owner<>'",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 105,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 103,
+        "length": 4,
+        "offset": 42,
+        "surroundingCode": "\n    void dynamic_cast_sample() {\n        Base *b = new Base;\n        if (Derived *d = dynamic_cast<Derived *>(b)) {\n            d->name();"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "0449798d679edb842b4a482817ae20537ba5e7216456b4fc156c73d2deec9edb"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-auto",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use auto when initializing with a cast to avoid duplicating the type name",
+  "detailsInfo": "use-auto",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 106,
+      "offset": 13,
+      "length": 7,
+      "code": {
+        "startLine": 104,
+        "length": 7,
+        "offset": 73,
+        "surroundingCode": "    void dynamic_cast_sample() {\n        Base *b = new Base;\n        if (Derived *d = dynamic_cast<Derived *>(b)) {\n            d->name();\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-auto"
+  },
+  "hash": "883e68727f356409706274d90c0a41e31f6738cd78bb02b974f4c14fcc94a971"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-auto",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use auto when initializing with a cast to avoid duplicating the type name",
+  "detailsInfo": "use-auto",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 112,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 110,
+        "length": 4,
+        "offset": 46,
+        "surroundingCode": "\n    void reinterpret_cast_sample() {\n        void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-auto"
+  },
+  "hash": "608dc333b60d293d0b7fd947c6dee11b561f84b408b687a55ce3cf8f4d13c419"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-type-reinterpret-cast",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use reinterpret_cast",
+  "detailsInfo": "pro-type-reinterpret-cast",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 112,
+      "offset": 33,
+      "length": 16,
+      "code": {
+        "startLine": 110,
+        "length": 16,
+        "offset": 70,
+        "surroundingCode": "\n    void reinterpret_cast_sample() {\n        void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-type-reinterpret-cast"
+  },
+  "hash": "1ad9f9c7b1fb5ef0cf3c6ce8298b70d7202b2d3b1a5f7641f85b0ad269615230"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "redundant-void-arg",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "redundant void argument list in named cast",
+  "detailsInfo": "redundant-void-arg",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 112,
+      "offset": 59,
+      "length": 4,
+      "code": {
+        "startLine": 110,
+        "length": 4,
+        "offset": 96,
+        "surroundingCode": "\n    void reinterpret_cast_sample() {\n        void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-redundant-void-arg"
+  },
+  "hash": "5be2e6978a09f66ad0b15324e36714039976032934d6b18524d59925400af5ef"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "pro-type-const-cast",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "do not use const_cast to remove const qualifier",
+  "detailsInfo": "pro-type-const-cast",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 117,
+      "offset": 19,
+      "length": 10,
+      "code": {
+        "startLine": 115,
+        "length": 10,
+        "offset": 75,
+        "surroundingCode": "    void const_cast_sample() {\n        const int j = 42;\n        int *pj = const_cast<int *>(&j);\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-pro-type-const-cast"
+  },
+  "hash": "a16810a63e02500f8456275ba30a64db5fa90bd6b762ae2fb34287277f03ec30"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "init-variables",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "variable 'cl1' is not initialized",
+  "detailsInfo": "init-variables",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 127,
+      "offset": 15,
+      "length": 3,
+      "code": {
+        "startLine": 125,
+        "length": 3,
+        "offset": 49,
+        "surroundingCode": "\n    void dfa_sample(int shadow) {\n        Color cl1, cl2;\n        Color res = Color::White;\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-init-variables"
+  },
+  "hash": "f024d2d3e6e7a64b04eed5fd45f805b2ee767a0963c0970333da6568bcc4b96a"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "init-variables",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "variable 'cl2' is not initialized",
+  "detailsInfo": "init-variables",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 127,
+      "offset": 20,
+      "length": 3,
+      "code": {
+        "startLine": 125,
+        "length": 3,
+        "offset": 54,
+        "surroundingCode": "\n    void dfa_sample(int shadow) {\n        Color cl1, cl2;\n        Color res = Color::White;\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-init-variables"
+  },
+  "hash": "1a28b214bbd9b3c2e702179f763fcea72f6b18c726827ea2b8c2a63ba0831247"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "owning-memory",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>'",
+  "detailsInfo": "owning-memory",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 163,
+      "offset": 9,
+      "length": 6,
+      "code": {
+        "startLine": 161,
+        "length": 6,
+        "offset": 73,
+        "surroundingCode": "\n    const User *get_User(int64_t company_id, int64_t user_id) {\n        return new User{company_id, user_id, \"foo\"};\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-owning-memory"
+  },
+  "hash": "142b897cabf620bb90bca437e9c908a76ed3938026bbe5f1b17a45b9d2b2c333"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "avoid-bind",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "prefer a lambda to std::bind",
+  "detailsInfo": "avoid-bind",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 177,
+      "offset": 20,
+      "length": 3,
+      "code": {
+        "startLine": 175,
+        "length": 3,
+        "offset": 73,
+        "surroundingCode": "    void bind_to_lambda(int num) {\n        int x = 2;\n        auto clj = std::bind(add, x, num);\n    }\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-avoid-bind"
+  },
+  "hash": "06cfa8c33f14ecd3e852f169ff58668a7744dad90d28b5aa255840f40e06b7e3"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "loop-convert",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "use range-based for loop instead",
+  "detailsInfo": "loop-convert",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 181,
+      "offset": 9,
+      "length": 3,
+      "code": {
+        "startLine": 179,
+        "length": 3,
+        "offset": 62,
+        "surroundingCode": "\n    void loop_convert(const std::vector<int> &vec) {\n        for (auto iter = vec.begin(); iter != vec.end(); ++iter) {\n            std::cout << *iter;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-loop-convert"
+  },
+  "hash": "934e4d2d91128fa72532d3e04e8519f89397a84f451212a207f72dc3501ba4b6"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "pass-by-value",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "pass by value and use std::move",
+  "detailsInfo": "pass-by-value",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 188,
+      "offset": 17,
+      "length": 5,
+      "code": {
+        "startLine": 186,
+        "length": 5,
+        "offset": 48,
+        "surroundingCode": "    class MyClass {\n    public:\n        MyClass(const std::string &Copied,\n                const std::string &ReadOnly)\n                : Copied(Copied), ReadOnly(ReadOnly) {}"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-pass-by-value"
+  },
+  "hash": "f7910c4446c01dea2de30d5d51b2d864950ff90e5c2d2d42f70b09b66342a4ff"
+},{
+  "tool": "Code Inspection",
+  "category": "cppcoreguidelines",
+  "type": "avoid-const-or-ref-data-members",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string &') is a reference",
+  "detailsInfo": "avoid-const-or-ref-data-members",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 194,
+      "offset": 28,
+      "length": 8,
+      "code": {
+        "startLine": 192,
+        "length": 8,
+        "offset": 68,
+        "surroundingCode": "    private:\n        std::string Copied;\n        const std::string &ReadOnly;\n    };\n"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "cppcoreguidelines-avoid-const-or-ref-data-members"
+  },
+  "hash": "49ac0e18db98aedfd3e9b646781830de0124fae4e42f5bd69c74a1564858117d"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nodiscard",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "function 'someMethod' should be marked [[nodiscard]]",
+  "detailsInfo": "use-nodiscard",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 199,
+      "offset": 9,
+      "length": 7,
+      "code": {
+        "startLine": 197,
+        "length": 7,
+        "offset": 48,
+        "surroundingCode": "    class BaseCalculation {\n    public:\n        virtual int someMethod(const int x, const int factor = 1) const {\n            return 42 * x * x * factor;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nodiscard"
+  },
+  "hash": "f9d65c3a7c69948006cd4a03dac85e17e60b0e13eada428bc4f87a0fca7a4fe0"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "default-arguments",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "default arguments on virtual or override methods are prohibited",
+  "detailsInfo": "default-arguments",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 199,
+      "offset": 21,
+      "length": 10,
+      "code": {
+        "startLine": 197,
+        "length": 10,
+        "offset": 60,
+        "surroundingCode": "    class BaseCalculation {\n    public:\n        virtual int someMethod(const int x, const int factor = 1) const {\n            return 42 * x * x * factor;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-default-arguments"
+  },
+  "hash": "34d02a555710ed2444fcb09cd6dfb7a80407061e4c8290285bcdf03cce5c69af"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nodiscard",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "function 'someMethod' should be marked [[nodiscard]]",
+  "detailsInfo": "use-nodiscard",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 206,
+      "offset": 9,
+      "length": 3,
+      "code": {
+        "startLine": 204,
+        "length": 3,
+        "offset": 76,
+        "surroundingCode": "    class DerivedCalculation : public BaseCalculation {\n    public:\n        int someMethod(const int x, const int factor = 0) const override {\n            return x * x * factor;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nodiscard"
+  },
+  "hash": "35a2eca0dcbc35f58edf6aa5f0eae187cc0c03fd45ac1929ad2440ede9946085"
+},{
+  "tool": "Code Inspection",
+  "category": "google",
+  "type": "default-arguments",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "default arguments on virtual or override methods are prohibited",
+  "detailsInfo": "default-arguments",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 206,
+      "offset": 13,
+      "length": 10,
+      "code": {
+        "startLine": 204,
+        "length": 10,
+        "offset": 80,
+        "surroundingCode": "    class DerivedCalculation : public BaseCalculation {\n    public:\n        int someMethod(const int x, const int factor = 0) const override {\n            return x * x * factor;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "google-default-arguments"
+  },
+  "hash": "2d7433e7432183d73fbbf08a6356ee84e75f6090913e2e6f031cdafdc5b43947"
+},{
+  "tool": "Code Inspection",
+  "category": "modernize",
+  "type": "use-nodiscard",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "function 'empty' should be marked [[nodiscard]]",
+  "detailsInfo": "use-nodiscard",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 215,
+      "offset": 9,
+      "length": 4,
+      "code": {
+        "startLine": 213,
+        "length": 4,
+        "offset": 50,
+        "surroundingCode": "        std::vector<int> vec;\n    public:\n        bool empty(int num) const {\n            return num % 2;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "modernize-use-nodiscard"
+  },
+  "hash": "b02e20576616c2514d151cc76ab5d963920e666a00426fa6d614ae0e079f6735"
+},{
+  "tool": "Code Inspection",
+  "category": "readability",
+  "type": "convert-member-functions-to-static",
+  "tags": [
+    "C++"
+  ],
+  "severity": "High",
+  "comment": "method 'empty' can be made static",
+  "detailsInfo": "convert-member-functions-to-static",
+  "sources": [
+    {
+      "type": "file",
+      "path": "code_analysis_summary.cpp",
+      "language": "",
+      "line": 215,
+      "offset": 14,
+      "length": 5,
+      "code": {
+        "startLine": 213,
+        "length": 5,
+        "offset": 55,
+        "surroundingCode": "        std::vector<int> vec;\n    public:\n        bool empty(int num) const {\n            return num % 2;\n        }"
+      }
+    }
+  ],
+  "attributes": {
+    "module": "",
+    "inspectionName": "readability-convert-member-functions-to-static"
+  },
+  "hash": "791ae29ba545e42e183bab2ddfcdfbe701e138ec161b949a812b092def294e38"
+}]}

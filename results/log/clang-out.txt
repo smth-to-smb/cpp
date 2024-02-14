@@ -1,0 +1,1560 @@
+File: /data/project/cppcast_quickfixes.cpp
+/data/project/cppcast_quickfixes.cpp:6:8: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    6 | struct Base {
+      |        ^
+/data/project/cppcast_quickfixes.cpp:7:13: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+    7 |     virtual ~Base() {}
+      |             ^       ~~
+      |                     = default;
+/data/project/cppcast_quickfixes.cpp:22:5: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   22 |     Base *b = new Base;
+      |     ^~~~~~~~~~~~~~~~~~
+/data/project/cppcast_quickfixes.cpp:23:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   23 |     if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |         ^~~~~~~
+      |         auto
+/data/project/cppcast_quickfixes.cpp:29:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+      |     auto *fun_pointer
+/data/project/cppcast_quickfixes.cpp:29:29: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                             ^
+/data/project/cppcast_quickfixes.cpp:29:55: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                       ^~~~
+/data/project/cppcast_quickfixes.cpp:34:15: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   34 |     int* pj = const_cast<int *>(&j);
+      |               ^
+
+8 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+/data/project/MISRA_inspections.cpp:20:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      | ^~~~~~~
+      |                 =
+   21 | 
+/data/project/MISRA_inspections.cpp:20:9: warning: macro 'SHIFT_8' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      |         ^
+/data/project/MISRA_inspections.cpp:27:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   27 |     int32_t code[5];
+      |     ^
+/data/project/MISRA_inspections.cpp:51:17: warning: use nullptr [modernize-use-nullptr]
+   51 |     process_ptr(0);
+      |                 ^
+      |                 nullptr
+/data/project/MISRA_inspections.cpp:56:5: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   56 |     OpClass *operator&() {};
+      |     ^
+/data/project/MISRA_inspections.cpp:61:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   61 |     MySingleCLass(int32_t a) {}
+      |     ^
+      |     explicit 
+/data/project/MISRA_inspections.cpp:76:8: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   76 |     *pX++;
+      |        ^
+
+71 warnings generated.
+
+File: /data/project/GoToFail.cpp
+/data/project/GoToFail.cpp:9:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+    9 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+   10 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: misleading indentation: statement is indented too deeply [readability-misleading-indentation]
+   10 |         goto fail;
+      |         ^
+/data/project/GoToFail.cpp:8:5: note: did you mean this line to be inside this 'if'
+    8 |     if (x == 8)
+      |     ^
+
+3 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+/data/project/Clang_Tidy_options.cpp:11:18: warning: use nullptr [modernize-use-nullptr]
+   11 |     char *var1 = NULL;
+      |                  ^~~~
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:12:18: warning: use nullptr [modernize-use-nullptr]
+   12 |     char *var2 = 0;
+      |                  ^
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:19:12: warning: use nullptr [modernize-use-nullptr]
+   19 |     return 0;
+      |            ^
+      |            nullptr
+
+22 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+/data/project/Clang_Tidy_google.cpp:7:22: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [cert-str34-c]
+    7 |     int my_ch = (int)ch;
+      |                      ^
+/data/project/Clang_Tidy_google.cpp:15:9: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   15 |         My_Class(int x) :x(x) {
+      |         ^
+      |         explicit 
+/data/project/Clang_Tidy_google.cpp:18:9: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   18 |         My_Class* operator&() {
+      |         ^
+/data/project/Clang_Tidy_google.cpp:29:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:29:17: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |                 ^
+/data/project/Clang_Tidy_google.cpp:37:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:37:9: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |         ^
+
+7 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:7:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+    7 |         arr[i] = 0;
+      |         ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:12:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   12 |     int arr[3] = {1,2,3};
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:13:5: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+   13 |     arr[ind] = 0;
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:18:5: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   18 |     const_cast<int&>(magic_num) = 42;
+      |     ^
+
+4 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+/data/project/DFAchecks.cpp:12:11: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |           ^
+/data/project/DFAchecks.cpp:12:16: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |                ^
+/data/project/DFAchecks.cpp:27:11: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+   27 |     Color c;
+      |           ^
+/data/project/DFAchecks.cpp:78:9: warning: method 'getSpeedX' can be made static [readability-convert-member-functions-to-static]
+   78 |     int getSpeedX() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:79:9: warning: method 'getSpeedY' can be made static [readability-convert-member-functions-to-static]
+   79 |     int getSpeedY() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:161:9: warning: 'head' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                   : head(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:162:9: warning: 'tail' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                  , tail(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+  162 |         tail = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:171:5: warning: initializing non-owner 'node *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  171 |     node *tmp = new node;
+      |     ^~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:189:9: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  189 |         delete pt;
+      |         ^      ~~
+/data/project/DFAchecks.cpp:188:10: note: variable declared here
+  188 |     for (node *pt = head; pt != nullptr; pt = pt->next) {
+      |          ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:223:10: warning: method 'foo' can be made static [readability-convert-member-functions-to-static]
+  223 |     int* foo() {
+      |          ^
+      |     static 
+/data/project/DFAchecks.cpp:230:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+  230 |         buffer[0] = 0;
+      |         ^
+/data/project/DFAchecks.cpp:254:29: warning: pointer parameter 'ptr' can be pointer to const [readability-non-const-parameter]
+  254 | static void delete_ptr(int* ptr) {
+      |                             ^
+      |                        const 
+/data/project/DFAchecks.cpp:255:5: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  255 |     delete ptr;
+      |     ^      ~~~
+/data/project/DFAchecks.cpp:254:24: note: variable declared here
+  254 | static void delete_ptr(int* ptr) {
+      |                        ^~~~~~~~
+/data/project/DFAchecks.cpp:259:5: warning: initializing non-owner 'int *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  259 |     int* int_ptr = new int;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:278:7: warning: variable 'nextState' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+  278 | State nextState;
+      |       ^
+/data/project/DFAchecks.cpp:307:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+  307 |     int buffer[100];
+      |     ^
+/data/project/DFAchecks.cpp:310:9: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  310 |         buffer[i] = 0; // buffer overflow when i is equal to 100
+      |         ^
+/data/project/DFAchecks.cpp:314:5: warning: std::array<> index 3 is past the end of the array (which contains 3 elements) [cppcoreguidelines-pro-bounds-constant-array-index]
+  314 |     a[a.size()] = 4; // a overflow when index is equal to a.size()
+      |     ^
+
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+/data/project/argument_selection_inspection.cpp:14:5: warning: function 'getWidth' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   14 |     int getWidth() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:18:5: warning: function 'getHeight' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   18 |     int getHeight() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:37:5: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   37 |     return new User{company_id, user_id, "foo"};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1006 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+/data/project/lifetime_safety_samples.cpp:33:9: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   33 |         char a[100];
+      |         ^
+/data/project/lifetime_safety_samples.cpp:34:13: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   34 |         s = a;
+      |             ^
+/data/project/lifetime_safety_samples.cpp:53:17: warning: variable 'ptr' is not initialized [cppcoreguidelines-init-variables]
+   53 |     const char *ptr;
+      |                 ^  
+      |                     = nullptr
+/data/project/lifetime_safety_samples.cpp:85:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   85 |     MyIntPointer(int *p = nullptr);
+      |     ^
+      |     explicit 
+/data/project/lifetime_safety_samples.cpp:86:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   86 |     MyIntPointer(const MyIntOwner &);
+      |     ^
+      |     explicit 
+
+1776 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+/data/project/code_analysis_summary.cpp:28:32: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+   28 |     Data CreateData() { return Data(); }
+      |                                ^~~~~~
+      |                                {}
+/data/project/code_analysis_summary.cpp:37:16: warning: method 'activity' can be made static [readability-convert-member-functions-to-static]
+   24 |         void activity();
+      |         static 
+   25 |         static int num;
+   26 |     };
+   27 | 
+   28 |     Data CreateData() { return Data(); }
+   29 | 
+   30 |     void ActivateData()
+   31 |     {
+   32 |         CreateData().activity();
+   33 |     }
+   34 | 
+   35 |     int Data::num = 1;
+   36 | 
+   37 |     void Data::activity()
+      |                ^
+/data/project/code_analysis_summary.cpp:67:9: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+   67 |         printf("Input param: %s, %d", x, y);
+      |         ^
+/data/project/code_analysis_summary.cpp:89:12: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   89 |     struct Base {
+      |            ^
+/data/project/code_analysis_summary.cpp:90:17: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   90 |         virtual ~Base() {}
+      |                 ^       ~~
+      |                         = default;
+/data/project/code_analysis_summary.cpp:105:9: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  105 |         Base *b = new Base;
+      |         ^~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:106:13: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  106 |         if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |             ^~~~~~~
+      |             auto
+/data/project/code_analysis_summary.cpp:112:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         auto *fun_pointer
+/data/project/code_analysis_summary.cpp:112:33: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                 ^
+/data/project/code_analysis_summary.cpp:112:59: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                           ^~~~
+/data/project/code_analysis_summary.cpp:117:19: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+  117 |         int *pj = const_cast<int *>(&j);
+      |                   ^
+/data/project/code_analysis_summary.cpp:127:15: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |               ^
+/data/project/code_analysis_summary.cpp:127:20: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |                    ^
+/data/project/code_analysis_summary.cpp:163:9: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  163 |         return new User{company_id, user_id, "foo"};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:177:20: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+  177 |         auto clj = std::bind(add, x, num);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~
+      |                    [x, num] { return add(x, num); }
+/data/project/code_analysis_summary.cpp:181:9: warning: use range-based for loop instead [modernize-loop-convert]
+  181 |         for (auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |         ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             (int iter : vec)
+  182 |             std::cout << *iter;
+      |                          ~~~~~
+      |                          iter
+/data/project/code_analysis_summary.cpp:188:17: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |         MyClass(const std::string &Copied,
+      |                 ^~~~~~~~~~~~~~~~~~~
+      |                 std::string 
+   11 |                 const std::string &ReadOnly)
+   12 |                 : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                                
+      |                          std::move( )
+/data/project/code_analysis_summary.cpp:194:28: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+  194 |         const std::string &ReadOnly;
+      |                            ^
+/data/project/code_analysis_summary.cpp:199:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:199:21: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |                     ^
+/data/project/code_analysis_summary.cpp:206:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:206:13: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |             ^
+/data/project/code_analysis_summary.cpp:215:9: warning: function 'empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  215 |         bool empty(int num) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:215:14: warning: method 'empty' can be made static [readability-convert-member-functions-to-static]
+  215 |         bool empty(int num) const {
+      |              ^              ~~~~~
+      |         static 
+
+2044 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+/data/project/Clang_Tidy_modernize.cpp:17:16: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+   17 |     auto clj = std::bind(add, x, num);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+      |                [x, num] { return add(x, num); }
+/data/project/Clang_Tidy_modernize.cpp:21:5: warning: use range-based for loop instead [modernize-loop-convert]
+   21 |     for(auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |     ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        (int iter : vec)
+   22 |         std::cout << *iter;
+      |                      ~~~~~
+      |                      iter
+/data/project/Clang_Tidy_modernize.cpp:28:13: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |     myClass(const std::string &Copied,
+      |             ^~~~~~~~~~~~~~~~~~~
+      |             std::string 
+   11 |             const std::string &ReadOnly)
+   12 |             : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                            
+      |                      std::move( )
+/data/project/Clang_Tidy_modernize.cpp:34:24: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+   34 |     const std::string &ReadOnly;
+      |                        ^
+
+2016 warnings generated.
+
+File: /data/project/cppcast_quickfixes.cpp
+/data/project/cppcast_quickfixes.cpp:6:8: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    6 | struct Base {
+      |        ^
+/data/project/cppcast_quickfixes.cpp:7:13: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+    7 |     virtual ~Base() {}
+      |             ^       ~~
+      |                     = default;
+/data/project/cppcast_quickfixes.cpp:22:5: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   22 |     Base *b = new Base;
+      |     ^~~~~~~~~~~~~~~~~~
+/data/project/cppcast_quickfixes.cpp:23:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   23 |     if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |         ^~~~~~~
+      |         auto
+/data/project/cppcast_quickfixes.cpp:29:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+      |     auto *fun_pointer
+/data/project/cppcast_quickfixes.cpp:29:29: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                             ^
+/data/project/cppcast_quickfixes.cpp:29:55: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                       ^~~~
+/data/project/cppcast_quickfixes.cpp:34:15: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   34 |     int* pj = const_cast<int *>(&j);
+      |               ^
+
+8 warnings generated.
+
+File: /data/project/GoToFail.cpp
+/data/project/GoToFail.cpp:9:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+    9 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+   10 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: misleading indentation: statement is indented too deeply [readability-misleading-indentation]
+   10 |         goto fail;
+      |         ^
+/data/project/GoToFail.cpp:8:5: note: did you mean this line to be inside this 'if'
+    8 |     if (x == 8)
+      |     ^
+
+3 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+/data/project/MISRA_inspections.cpp:20:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      | ^~~~~~~
+      |                 =
+   21 | 
+/data/project/MISRA_inspections.cpp:20:9: warning: macro 'SHIFT_8' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      |         ^
+/data/project/MISRA_inspections.cpp:27:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   27 |     int32_t code[5];
+      |     ^
+/data/project/MISRA_inspections.cpp:51:17: warning: use nullptr [modernize-use-nullptr]
+   51 |     process_ptr(0);
+      |                 ^
+      |                 nullptr
+/data/project/MISRA_inspections.cpp:56:5: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   56 |     OpClass *operator&() {};
+      |     ^
+/data/project/MISRA_inspections.cpp:61:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   61 |     MySingleCLass(int32_t a) {}
+      |     ^
+      |     explicit 
+/data/project/MISRA_inspections.cpp:76:8: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   76 |     *pX++;
+      |        ^
+
+71 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+/data/project/Clang_Tidy_google.cpp:7:22: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [cert-str34-c]
+    7 |     int my_ch = (int)ch;
+      |                      ^
+/data/project/Clang_Tidy_google.cpp:15:9: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   15 |         My_Class(int x) :x(x) {
+      |         ^
+      |         explicit 
+/data/project/Clang_Tidy_google.cpp:18:9: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   18 |         My_Class* operator&() {
+      |         ^
+/data/project/Clang_Tidy_google.cpp:29:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:29:17: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |                 ^
+/data/project/Clang_Tidy_google.cpp:37:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:37:9: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |         ^
+
+7 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:7:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+    7 |         arr[i] = 0;
+      |         ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:12:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   12 |     int arr[3] = {1,2,3};
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:13:5: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+   13 |     arr[ind] = 0;
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:18:5: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   18 |     const_cast<int&>(magic_num) = 42;
+      |     ^
+
+4 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+/data/project/Clang_Tidy_options.cpp:11:18: warning: use nullptr [modernize-use-nullptr]
+   11 |     char *var1 = NULL;
+      |                  ^~~~
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:12:18: warning: use nullptr [modernize-use-nullptr]
+   12 |     char *var2 = 0;
+      |                  ^
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:19:12: warning: use nullptr [modernize-use-nullptr]
+   19 |     return 0;
+      |            ^
+      |            nullptr
+
+22 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+/data/project/DFAchecks.cpp:12:11: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |           ^
+/data/project/DFAchecks.cpp:12:16: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |                ^
+/data/project/DFAchecks.cpp:27:11: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+   27 |     Color c;
+      |           ^
+/data/project/DFAchecks.cpp:78:9: warning: method 'getSpeedX' can be made static [readability-convert-member-functions-to-static]
+   78 |     int getSpeedX() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:79:9: warning: method 'getSpeedY' can be made static [readability-convert-member-functions-to-static]
+   79 |     int getSpeedY() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:161:9: warning: 'head' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                   : head(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:162:9: warning: 'tail' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                  , tail(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+  162 |         tail = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:171:5: warning: initializing non-owner 'node *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  171 |     node *tmp = new node;
+      |     ^~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:189:9: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  189 |         delete pt;
+      |         ^      ~~
+/data/project/DFAchecks.cpp:188:10: note: variable declared here
+  188 |     for (node *pt = head; pt != nullptr; pt = pt->next) {
+      |          ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:223:10: warning: method 'foo' can be made static [readability-convert-member-functions-to-static]
+  223 |     int* foo() {
+      |          ^
+      |     static 
+/data/project/DFAchecks.cpp:230:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+  230 |         buffer[0] = 0;
+      |         ^
+/data/project/DFAchecks.cpp:254:29: warning: pointer parameter 'ptr' can be pointer to const [readability-non-const-parameter]
+  254 | static void delete_ptr(int* ptr) {
+      |                             ^
+      |                        const 
+/data/project/DFAchecks.cpp:255:5: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  255 |     delete ptr;
+      |     ^      ~~~
+/data/project/DFAchecks.cpp:254:24: note: variable declared here
+  254 | static void delete_ptr(int* ptr) {
+      |                        ^~~~~~~~
+/data/project/DFAchecks.cpp:259:5: warning: initializing non-owner 'int *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  259 |     int* int_ptr = new int;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:278:7: warning: variable 'nextState' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+  278 | State nextState;
+      |       ^
+/data/project/DFAchecks.cpp:307:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+  307 |     int buffer[100];
+      |     ^
+/data/project/DFAchecks.cpp:310:9: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  310 |         buffer[i] = 0; // buffer overflow when i is equal to 100
+      |         ^
+/data/project/DFAchecks.cpp:314:5: warning: std::array<> index 3 is past the end of the array (which contains 3 elements) [cppcoreguidelines-pro-bounds-constant-array-index]
+  314 |     a[a.size()] = 4; // a overflow when index is equal to a.size()
+      |     ^
+
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+/data/project/argument_selection_inspection.cpp:14:5: warning: function 'getWidth' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   14 |     int getWidth() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:18:5: warning: function 'getHeight' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   18 |     int getHeight() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:37:5: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   37 |     return new User{company_id, user_id, "foo"};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1006 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+/data/project/lifetime_safety_samples.cpp:33:9: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   33 |         char a[100];
+      |         ^
+/data/project/lifetime_safety_samples.cpp:34:13: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   34 |         s = a;
+      |             ^
+/data/project/lifetime_safety_samples.cpp:53:17: warning: variable 'ptr' is not initialized [cppcoreguidelines-init-variables]
+   53 |     const char *ptr;
+      |                 ^  
+      |                     = nullptr
+/data/project/lifetime_safety_samples.cpp:85:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   85 |     MyIntPointer(int *p = nullptr);
+      |     ^
+      |     explicit 
+/data/project/lifetime_safety_samples.cpp:86:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   86 |     MyIntPointer(const MyIntOwner &);
+      |     ^
+      |     explicit 
+
+1776 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+/data/project/code_analysis_summary.cpp:28:32: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+   28 |     Data CreateData() { return Data(); }
+      |                                ^~~~~~
+      |                                {}
+/data/project/code_analysis_summary.cpp:37:16: warning: method 'activity' can be made static [readability-convert-member-functions-to-static]
+   24 |         void activity();
+      |         static 
+   25 |         static int num;
+   26 |     };
+   27 | 
+   28 |     Data CreateData() { return Data(); }
+   29 | 
+   30 |     void ActivateData()
+   31 |     {
+   32 |         CreateData().activity();
+   33 |     }
+   34 | 
+   35 |     int Data::num = 1;
+   36 | 
+   37 |     void Data::activity()
+      |                ^
+/data/project/code_analysis_summary.cpp:67:9: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+   67 |         printf("Input param: %s, %d", x, y);
+      |         ^
+/data/project/code_analysis_summary.cpp:89:12: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   89 |     struct Base {
+      |            ^
+/data/project/code_analysis_summary.cpp:90:17: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   90 |         virtual ~Base() {}
+      |                 ^       ~~
+      |                         = default;
+/data/project/code_analysis_summary.cpp:105:9: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  105 |         Base *b = new Base;
+      |         ^~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:106:13: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  106 |         if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |             ^~~~~~~
+      |             auto
+/data/project/code_analysis_summary.cpp:112:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         auto *fun_pointer
+/data/project/code_analysis_summary.cpp:112:33: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                 ^
+/data/project/code_analysis_summary.cpp:112:59: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                           ^~~~
+/data/project/code_analysis_summary.cpp:117:19: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+  117 |         int *pj = const_cast<int *>(&j);
+      |                   ^
+/data/project/code_analysis_summary.cpp:127:15: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |               ^
+/data/project/code_analysis_summary.cpp:127:20: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |                    ^
+/data/project/code_analysis_summary.cpp:163:9: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  163 |         return new User{company_id, user_id, "foo"};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:177:20: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+  177 |         auto clj = std::bind(add, x, num);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~
+      |                    [x, num] { return add(x, num); }
+/data/project/code_analysis_summary.cpp:181:9: warning: use range-based for loop instead [modernize-loop-convert]
+  181 |         for (auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |         ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             (int iter : vec)
+  182 |             std::cout << *iter;
+      |                          ~~~~~
+      |                          iter
+/data/project/code_analysis_summary.cpp:188:17: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |         MyClass(const std::string &Copied,
+      |                 ^~~~~~~~~~~~~~~~~~~
+      |                 std::string 
+   11 |                 const std::string &ReadOnly)
+   12 |                 : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                                
+      |                          std::move( )
+/data/project/code_analysis_summary.cpp:194:28: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+  194 |         const std::string &ReadOnly;
+      |                            ^
+/data/project/code_analysis_summary.cpp:199:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:199:21: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |                     ^
+/data/project/code_analysis_summary.cpp:206:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:206:13: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |             ^
+/data/project/code_analysis_summary.cpp:215:9: warning: function 'empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  215 |         bool empty(int num) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:215:14: warning: method 'empty' can be made static [readability-convert-member-functions-to-static]
+  215 |         bool empty(int num) const {
+      |              ^              ~~~~~
+      |         static 
+
+2044 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+/data/project/Clang_Tidy_modernize.cpp:17:16: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+   17 |     auto clj = std::bind(add, x, num);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+      |                [x, num] { return add(x, num); }
+/data/project/Clang_Tidy_modernize.cpp:21:5: warning: use range-based for loop instead [modernize-loop-convert]
+   21 |     for(auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |     ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        (int iter : vec)
+   22 |         std::cout << *iter;
+      |                      ~~~~~
+      |                      iter
+/data/project/Clang_Tidy_modernize.cpp:28:13: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |     myClass(const std::string &Copied,
+      |             ^~~~~~~~~~~~~~~~~~~
+      |             std::string 
+   11 |             const std::string &ReadOnly)
+   12 |             : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                            
+      |                      std::move( )
+/data/project/Clang_Tidy_modernize.cpp:34:24: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+   34 |     const std::string &ReadOnly;
+      |                        ^
+
+2016 warnings generated.
+
+File: /data/project/cppcast_quickfixes.cpp
+/data/project/cppcast_quickfixes.cpp:6:8: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    6 | struct Base {
+      |        ^
+/data/project/cppcast_quickfixes.cpp:7:13: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+    7 |     virtual ~Base() {}
+      |             ^       ~~
+      |                     = default;
+/data/project/cppcast_quickfixes.cpp:22:5: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   22 |     Base *b = new Base;
+      |     ^~~~~~~~~~~~~~~~~~
+/data/project/cppcast_quickfixes.cpp:23:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   23 |     if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |         ^~~~~~~
+      |         auto
+/data/project/cppcast_quickfixes.cpp:29:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+      |     auto *fun_pointer
+/data/project/cppcast_quickfixes.cpp:29:29: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                             ^
+/data/project/cppcast_quickfixes.cpp:29:55: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                       ^~~~
+/data/project/cppcast_quickfixes.cpp:34:15: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   34 |     int* pj = const_cast<int *>(&j);
+      |               ^
+
+8 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+/data/project/Clang_Tidy_options.cpp:11:18: warning: use nullptr [modernize-use-nullptr]
+   11 |     char *var1 = NULL;
+      |                  ^~~~
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:12:18: warning: use nullptr [modernize-use-nullptr]
+   12 |     char *var2 = 0;
+      |                  ^
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:19:12: warning: use nullptr [modernize-use-nullptr]
+   19 |     return 0;
+      |            ^
+      |            nullptr
+
+22 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+/data/project/MISRA_inspections.cpp:20:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      | ^~~~~~~
+      |                 =
+   21 | 
+/data/project/MISRA_inspections.cpp:20:9: warning: macro 'SHIFT_8' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      |         ^
+/data/project/MISRA_inspections.cpp:27:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   27 |     int32_t code[5];
+      |     ^
+/data/project/MISRA_inspections.cpp:51:17: warning: use nullptr [modernize-use-nullptr]
+   51 |     process_ptr(0);
+      |                 ^
+      |                 nullptr
+/data/project/MISRA_inspections.cpp:56:5: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   56 |     OpClass *operator&() {};
+      |     ^
+/data/project/MISRA_inspections.cpp:61:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   61 |     MySingleCLass(int32_t a) {}
+      |     ^
+      |     explicit 
+/data/project/MISRA_inspections.cpp:76:8: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   76 |     *pX++;
+      |        ^
+
+71 warnings generated.
+
+File: /data/project/GoToFail.cpp
+/data/project/GoToFail.cpp:9:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+    9 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+   10 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: misleading indentation: statement is indented too deeply [readability-misleading-indentation]
+   10 |         goto fail;
+      |         ^
+/data/project/GoToFail.cpp:8:5: note: did you mean this line to be inside this 'if'
+    8 |     if (x == 8)
+      |     ^
+
+3 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:7:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+    7 |         arr[i] = 0;
+      |         ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:12:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   12 |     int arr[3] = {1,2,3};
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:13:5: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+   13 |     arr[ind] = 0;
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:18:5: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   18 |     const_cast<int&>(magic_num) = 42;
+      |     ^
+
+4 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+/data/project/Clang_Tidy_google.cpp:7:22: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [cert-str34-c]
+    7 |     int my_ch = (int)ch;
+      |                      ^
+/data/project/Clang_Tidy_google.cpp:15:9: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   15 |         My_Class(int x) :x(x) {
+      |         ^
+      |         explicit 
+/data/project/Clang_Tidy_google.cpp:18:9: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   18 |         My_Class* operator&() {
+      |         ^
+/data/project/Clang_Tidy_google.cpp:29:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:29:17: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |                 ^
+/data/project/Clang_Tidy_google.cpp:37:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:37:9: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |         ^
+
+7 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+/data/project/DFAchecks.cpp:12:11: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |           ^
+/data/project/DFAchecks.cpp:12:16: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |                ^
+/data/project/DFAchecks.cpp:27:11: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+   27 |     Color c;
+      |           ^
+/data/project/DFAchecks.cpp:78:9: warning: method 'getSpeedX' can be made static [readability-convert-member-functions-to-static]
+   78 |     int getSpeedX() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:79:9: warning: method 'getSpeedY' can be made static [readability-convert-member-functions-to-static]
+   79 |     int getSpeedY() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:161:9: warning: 'head' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                   : head(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:162:9: warning: 'tail' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                  , tail(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+  162 |         tail = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:171:5: warning: initializing non-owner 'node *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  171 |     node *tmp = new node;
+      |     ^~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:189:9: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  189 |         delete pt;
+      |         ^      ~~
+/data/project/DFAchecks.cpp:188:10: note: variable declared here
+  188 |     for (node *pt = head; pt != nullptr; pt = pt->next) {
+      |          ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:223:10: warning: method 'foo' can be made static [readability-convert-member-functions-to-static]
+  223 |     int* foo() {
+      |          ^
+      |     static 
+/data/project/DFAchecks.cpp:230:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+  230 |         buffer[0] = 0;
+      |         ^
+/data/project/DFAchecks.cpp:254:29: warning: pointer parameter 'ptr' can be pointer to const [readability-non-const-parameter]
+  254 | static void delete_ptr(int* ptr) {
+      |                             ^
+      |                        const 
+/data/project/DFAchecks.cpp:255:5: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  255 |     delete ptr;
+      |     ^      ~~~
+/data/project/DFAchecks.cpp:254:24: note: variable declared here
+  254 | static void delete_ptr(int* ptr) {
+      |                        ^~~~~~~~
+/data/project/DFAchecks.cpp:259:5: warning: initializing non-owner 'int *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  259 |     int* int_ptr = new int;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:278:7: warning: variable 'nextState' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+  278 | State nextState;
+      |       ^
+/data/project/DFAchecks.cpp:307:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+  307 |     int buffer[100];
+      |     ^
+/data/project/DFAchecks.cpp:310:9: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  310 |         buffer[i] = 0; // buffer overflow when i is equal to 100
+      |         ^
+/data/project/DFAchecks.cpp:314:5: warning: std::array<> index 3 is past the end of the array (which contains 3 elements) [cppcoreguidelines-pro-bounds-constant-array-index]
+  314 |     a[a.size()] = 4; // a overflow when index is equal to a.size()
+      |     ^
+
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+/data/project/argument_selection_inspection.cpp:14:5: warning: function 'getWidth' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   14 |     int getWidth() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:18:5: warning: function 'getHeight' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   18 |     int getHeight() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:37:5: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   37 |     return new User{company_id, user_id, "foo"};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1006 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+/data/project/lifetime_safety_samples.cpp:33:9: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   33 |         char a[100];
+      |         ^
+/data/project/lifetime_safety_samples.cpp:34:13: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   34 |         s = a;
+      |             ^
+/data/project/lifetime_safety_samples.cpp:53:17: warning: variable 'ptr' is not initialized [cppcoreguidelines-init-variables]
+   53 |     const char *ptr;
+      |                 ^  
+      |                     = nullptr
+/data/project/lifetime_safety_samples.cpp:85:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   85 |     MyIntPointer(int *p = nullptr);
+      |     ^
+      |     explicit 
+/data/project/lifetime_safety_samples.cpp:86:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   86 |     MyIntPointer(const MyIntOwner &);
+      |     ^
+      |     explicit 
+
+1776 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+/data/project/Clang_Tidy_modernize.cpp:17:16: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+   17 |     auto clj = std::bind(add, x, num);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+      |                [x, num] { return add(x, num); }
+/data/project/Clang_Tidy_modernize.cpp:21:5: warning: use range-based for loop instead [modernize-loop-convert]
+   21 |     for(auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |     ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        (int iter : vec)
+   22 |         std::cout << *iter;
+      |                      ~~~~~
+      |                      iter
+/data/project/Clang_Tidy_modernize.cpp:28:13: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |     myClass(const std::string &Copied,
+      |             ^~~~~~~~~~~~~~~~~~~
+      |             std::string 
+   11 |             const std::string &ReadOnly)
+   12 |             : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                            
+      |                      std::move( )
+/data/project/Clang_Tidy_modernize.cpp:34:24: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+   34 |     const std::string &ReadOnly;
+      |                        ^
+
+2016 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+/data/project/code_analysis_summary.cpp:28:32: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+   28 |     Data CreateData() { return Data(); }
+      |                                ^~~~~~
+      |                                {}
+/data/project/code_analysis_summary.cpp:37:16: warning: method 'activity' can be made static [readability-convert-member-functions-to-static]
+   24 |         void activity();
+      |         static 
+   25 |         static int num;
+   26 |     };
+   27 | 
+   28 |     Data CreateData() { return Data(); }
+   29 | 
+   30 |     void ActivateData()
+   31 |     {
+   32 |         CreateData().activity();
+   33 |     }
+   34 | 
+   35 |     int Data::num = 1;
+   36 | 
+   37 |     void Data::activity()
+      |                ^
+/data/project/code_analysis_summary.cpp:67:9: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+   67 |         printf("Input param: %s, %d", x, y);
+      |         ^
+/data/project/code_analysis_summary.cpp:89:12: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   89 |     struct Base {
+      |            ^
+/data/project/code_analysis_summary.cpp:90:17: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   90 |         virtual ~Base() {}
+      |                 ^       ~~
+      |                         = default;
+/data/project/code_analysis_summary.cpp:105:9: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  105 |         Base *b = new Base;
+      |         ^~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:106:13: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  106 |         if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |             ^~~~~~~
+      |             auto
+/data/project/code_analysis_summary.cpp:112:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         auto *fun_pointer
+/data/project/code_analysis_summary.cpp:112:33: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                 ^
+/data/project/code_analysis_summary.cpp:112:59: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                           ^~~~
+/data/project/code_analysis_summary.cpp:117:19: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+  117 |         int *pj = const_cast<int *>(&j);
+      |                   ^
+/data/project/code_analysis_summary.cpp:127:15: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |               ^
+/data/project/code_analysis_summary.cpp:127:20: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |                    ^
+/data/project/code_analysis_summary.cpp:163:9: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  163 |         return new User{company_id, user_id, "foo"};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:177:20: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+  177 |         auto clj = std::bind(add, x, num);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~
+      |                    [x, num] { return add(x, num); }
+/data/project/code_analysis_summary.cpp:181:9: warning: use range-based for loop instead [modernize-loop-convert]
+  181 |         for (auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |         ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             (int iter : vec)
+  182 |             std::cout << *iter;
+      |                          ~~~~~
+      |                          iter
+/data/project/code_analysis_summary.cpp:188:17: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |         MyClass(const std::string &Copied,
+      |                 ^~~~~~~~~~~~~~~~~~~
+      |                 std::string 
+   11 |                 const std::string &ReadOnly)
+   12 |                 : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                                
+      |                          std::move( )
+/data/project/code_analysis_summary.cpp:194:28: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+  194 |         const std::string &ReadOnly;
+      |                            ^
+/data/project/code_analysis_summary.cpp:199:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:199:21: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |                     ^
+/data/project/code_analysis_summary.cpp:206:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:206:13: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |             ^
+/data/project/code_analysis_summary.cpp:215:9: warning: function 'empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  215 |         bool empty(int num) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:215:14: warning: method 'empty' can be made static [readability-convert-member-functions-to-static]
+  215 |         bool empty(int num) const {
+      |              ^              ~~~~~
+      |         static 
+
+2044 warnings generated.
+
+File: /data/project/GoToFail.cpp
+/data/project/GoToFail.cpp:9:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+    9 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: avoid using 'goto' for flow control [cppcoreguidelines-avoid-goto]
+   10 |         goto fail;
+      |         ^~~~~~~~~
+/data/project/GoToFail.cpp:13:5: note: label defined here
+   13 |     fail:
+      |     ^
+/data/project/GoToFail.cpp:10:9: warning: misleading indentation: statement is indented too deeply [readability-misleading-indentation]
+   10 |         goto fail;
+      |         ^
+/data/project/GoToFail.cpp:8:5: note: did you mean this line to be inside this 'if'
+    8 |     if (x == 8)
+      |     ^
+
+3 warnings generated.
+
+File: /data/project/Clang_Tidy_cppcoreguidelines.cpp
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:7:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+    7 |         arr[i] = 0;
+      |         ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:12:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   12 |     int arr[3] = {1,2,3};
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:13:5: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+   13 |     arr[ind] = 0;
+      |     ^
+/data/project/Clang_Tidy_cppcoreguidelines.cpp:18:5: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   18 |     const_cast<int&>(magic_num) = 42;
+      |     ^
+
+4 warnings generated.
+
+File: /data/project/MISRA_inspections.cpp
+/data/project/MISRA_inspections.cpp:20:1: warning: replace macro with enum [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      | ^~~~~~~
+      |                 =
+   21 | 
+/data/project/MISRA_inspections.cpp:20:9: warning: macro 'SHIFT_8' defines an integral constant; prefer an enum instead [cppcoreguidelines-macro-to-enum]
+   20 | #define SHIFT_8 8
+      |         ^
+/data/project/MISRA_inspections.cpp:27:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   27 |     int32_t code[5];
+      |     ^
+/data/project/MISRA_inspections.cpp:51:17: warning: use nullptr [modernize-use-nullptr]
+   51 |     process_ptr(0);
+      |                 ^
+      |                 nullptr
+/data/project/MISRA_inspections.cpp:56:5: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   56 |     OpClass *operator&() {};
+      |     ^
+/data/project/MISRA_inspections.cpp:61:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   61 |     MySingleCLass(int32_t a) {}
+      |     ^
+      |     explicit 
+/data/project/MISRA_inspections.cpp:76:8: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+   76 |     *pX++;
+      |        ^
+
+71 warnings generated.
+
+File: /data/project/Clang_Tidy_google.cpp
+/data/project/Clang_Tidy_google.cpp:7:22: warning: 'signed char' to 'int' conversion; consider casting to 'unsigned char' first. [cert-str34-c]
+    7 |     int my_ch = (int)ch;
+      |                      ^
+/data/project/Clang_Tidy_google.cpp:15:9: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   15 |         My_Class(int x) :x(x) {
+      |         ^
+      |         explicit 
+/data/project/Clang_Tidy_google.cpp:18:9: warning: do not overload unary operator&, it is dangerous. [google-runtime-operator]
+   18 |         My_Class* operator&() {
+      |         ^
+/data/project/Clang_Tidy_google.cpp:29:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:29:17: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   29 |     virtual int someMethod(const int x, const int factor = 1) const
+      |                 ^
+/data/project/Clang_Tidy_google.cpp:37:5: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |     ^
+      |     [[nodiscard]] 
+/data/project/Clang_Tidy_google.cpp:37:9: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+   37 |     int someMethod(const int x, const int factor = 0) const override
+      |         ^
+
+7 warnings generated.
+
+File: /data/project/cppcast_quickfixes.cpp
+/data/project/cppcast_quickfixes.cpp:6:8: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+    6 | struct Base {
+      |        ^
+/data/project/cppcast_quickfixes.cpp:7:13: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+    7 |     virtual ~Base() {}
+      |             ^       ~~
+      |                     = default;
+/data/project/cppcast_quickfixes.cpp:22:5: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   22 |     Base *b = new Base;
+      |     ^~~~~~~~~~~~~~~~~~
+/data/project/cppcast_quickfixes.cpp:23:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   23 |     if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |         ^~~~~~~
+      |         auto
+/data/project/cppcast_quickfixes.cpp:29:5: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+      |     auto *fun_pointer
+/data/project/cppcast_quickfixes.cpp:29:29: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                             ^
+/data/project/cppcast_quickfixes.cpp:29:55: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+   29 |     void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                       ^~~~
+/data/project/cppcast_quickfixes.cpp:34:15: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+   34 |     int* pj = const_cast<int *>(&j);
+      |               ^
+
+8 warnings generated.
+
+File: /data/project/Clang_Tidy_options.cpp
+/data/project/Clang_Tidy_options.cpp:11:18: warning: use nullptr [modernize-use-nullptr]
+   11 |     char *var1 = NULL;
+      |                  ^~~~
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:12:18: warning: use nullptr [modernize-use-nullptr]
+   12 |     char *var2 = 0;
+      |                  ^
+      |                  nullptr
+/data/project/Clang_Tidy_options.cpp:19:12: warning: use nullptr [modernize-use-nullptr]
+   19 |     return 0;
+      |            ^
+      |            nullptr
+
+22 warnings generated.
+
+File: /data/project/DFAchecks.cpp
+/data/project/DFAchecks.cpp:12:11: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |           ^
+/data/project/DFAchecks.cpp:12:16: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+   12 |     Color cl1, cl2;
+      |                ^
+/data/project/DFAchecks.cpp:27:11: warning: variable 'c' is not initialized [cppcoreguidelines-init-variables]
+   27 |     Color c;
+      |           ^
+/data/project/DFAchecks.cpp:78:9: warning: method 'getSpeedX' can be made static [readability-convert-member-functions-to-static]
+   78 |     int getSpeedX() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:79:9: warning: method 'getSpeedY' can be made static [readability-convert-member-functions-to-static]
+   79 |     int getSpeedY() { return 0; }
+      |         ^
+      |     static 
+/data/project/DFAchecks.cpp:161:9: warning: 'head' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                   : head(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:162:9: warning: 'tail' should be initialized in a member initializer of the constructor [cppcoreguidelines-prefer-member-initializer]
+  159 |     linked_list()
+      |                  
+      |                  , tail(nullptr)
+  160 |     {
+  161 |         head = nullptr;
+  162 |         tail = nullptr;
+      |         ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:171:5: warning: initializing non-owner 'node *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  171 |     node *tmp = new node;
+      |     ^~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:189:9: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  189 |         delete pt;
+      |         ^      ~~
+/data/project/DFAchecks.cpp:188:10: note: variable declared here
+  188 |     for (node *pt = head; pt != nullptr; pt = pt->next) {
+      |          ^~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:223:10: warning: method 'foo' can be made static [readability-convert-member-functions-to-static]
+  223 |     int* foo() {
+      |          ^
+      |     static 
+/data/project/DFAchecks.cpp:230:9: warning: do not use pointer arithmetic [cppcoreguidelines-pro-bounds-pointer-arithmetic]
+  230 |         buffer[0] = 0;
+      |         ^
+/data/project/DFAchecks.cpp:254:29: warning: pointer parameter 'ptr' can be pointer to const [readability-non-const-parameter]
+  254 | static void delete_ptr(int* ptr) {
+      |                             ^
+      |                        const 
+/data/project/DFAchecks.cpp:255:5: warning: deleting a pointer through a type that is not marked 'gsl::owner<>'; consider using a smart pointer instead [cppcoreguidelines-owning-memory]
+  255 |     delete ptr;
+      |     ^      ~~~
+/data/project/DFAchecks.cpp:254:24: note: variable declared here
+  254 | static void delete_ptr(int* ptr) {
+      |                        ^~~~~~~~
+/data/project/DFAchecks.cpp:259:5: warning: initializing non-owner 'int *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  259 |     int* int_ptr = new int;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/data/project/DFAchecks.cpp:278:7: warning: variable 'nextState' is non-const and globally accessible, consider making it const [cppcoreguidelines-avoid-non-const-global-variables]
+  278 | State nextState;
+      |       ^
+/data/project/DFAchecks.cpp:307:5: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+  307 |     int buffer[100];
+      |     ^
+/data/project/DFAchecks.cpp:310:9: warning: do not use array subscript when the index is not an integer constant expression [cppcoreguidelines-pro-bounds-constant-array-index]
+  310 |         buffer[i] = 0; // buffer overflow when i is equal to 100
+      |         ^
+/data/project/DFAchecks.cpp:314:5: warning: std::array<> index 3 is past the end of the array (which contains 3 elements) [cppcoreguidelines-pro-bounds-constant-array-index]
+  314 |     a[a.size()] = 4; // a overflow when index is equal to a.size()
+      |     ^
+
+134 warnings generated.
+
+File: /data/project/argument_selection_inspection.cpp
+/data/project/argument_selection_inspection.cpp:14:5: warning: function 'getWidth' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   14 |     int getWidth() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:18:5: warning: function 'getHeight' should be marked [[nodiscard]] [modernize-use-nodiscard]
+   18 |     int getHeight() const {
+      |     ^
+      |     [[nodiscard]] 
+/data/project/argument_selection_inspection.cpp:37:5: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+   37 |     return new User{company_id, user_id, "foo"};
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1006 warnings generated.
+
+File: /data/project/lifetime_safety_samples.cpp
+/data/project/lifetime_safety_samples.cpp:33:9: warning: do not declare C-style arrays, use std::array<> instead [cppcoreguidelines-avoid-c-arrays]
+   33 |         char a[100];
+      |         ^
+/data/project/lifetime_safety_samples.cpp:34:13: warning: do not implicitly decay an array into a pointer; consider using gsl::array_view or an explicit cast instead [cppcoreguidelines-pro-bounds-array-to-pointer-decay]
+   34 |         s = a;
+      |             ^
+/data/project/lifetime_safety_samples.cpp:53:17: warning: variable 'ptr' is not initialized [cppcoreguidelines-init-variables]
+   53 |     const char *ptr;
+      |                 ^  
+      |                     = nullptr
+/data/project/lifetime_safety_samples.cpp:85:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   85 |     MyIntPointer(int *p = nullptr);
+      |     ^
+      |     explicit 
+/data/project/lifetime_safety_samples.cpp:86:5: warning: single-argument constructors must be marked explicit to avoid unintentional implicit conversions [google-explicit-constructor]
+   86 |     MyIntPointer(const MyIntOwner &);
+      |     ^
+      |     explicit 
+
+1776 warnings generated.
+
+File: /data/project/Clang_Tidy_modernize.cpp
+/data/project/Clang_Tidy_modernize.cpp:17:16: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+   17 |     auto clj = std::bind(add, x, num);
+      |                ^~~~~~~~~~~~~~~~~~~~~~
+      |                [x, num] { return add(x, num); }
+/data/project/Clang_Tidy_modernize.cpp:21:5: warning: use range-based for loop instead [modernize-loop-convert]
+   21 |     for(auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |     ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |        (int iter : vec)
+   22 |         std::cout << *iter;
+      |                      ~~~~~
+      |                      iter
+/data/project/Clang_Tidy_modernize.cpp:28:13: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |     myClass(const std::string &Copied,
+      |             ^~~~~~~~~~~~~~~~~~~
+      |             std::string 
+   11 |             const std::string &ReadOnly)
+   12 |             : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                            
+      |                      std::move( )
+/data/project/Clang_Tidy_modernize.cpp:34:24: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+   34 |     const std::string &ReadOnly;
+      |                        ^
+
+2016 warnings generated.
+
+File: /data/project/code_analysis_summary.cpp
+/data/project/code_analysis_summary.cpp:28:32: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+   28 |     Data CreateData() { return Data(); }
+      |                                ^~~~~~
+      |                                {}
+/data/project/code_analysis_summary.cpp:37:16: warning: method 'activity' can be made static [readability-convert-member-functions-to-static]
+   24 |         void activity();
+      |         static 
+   25 |         static int num;
+   26 |     };
+   27 | 
+   28 |     Data CreateData() { return Data(); }
+   29 | 
+   30 |     void ActivateData()
+   31 |     {
+   32 |         CreateData().activity();
+   33 |     }
+   34 | 
+   35 |     int Data::num = 1;
+   36 | 
+   37 |     void Data::activity()
+      |                ^
+/data/project/code_analysis_summary.cpp:67:9: warning: do not call c-style vararg functions [cppcoreguidelines-pro-type-vararg]
+   67 |         printf("Input param: %s, %d", x, y);
+      |         ^
+/data/project/code_analysis_summary.cpp:89:12: warning: class 'Base' defines a non-default destructor but does not define a copy constructor, a copy assignment operator, a move constructor or a move assignment operator [cppcoreguidelines-special-member-functions]
+   89 |     struct Base {
+      |            ^
+/data/project/code_analysis_summary.cpp:90:17: warning: use '= default' to define a trivial destructor [modernize-use-equals-default]
+   90 |         virtual ~Base() {}
+      |                 ^       ~~
+      |                         = default;
+/data/project/code_analysis_summary.cpp:105:9: warning: initializing non-owner 'Base *' with a newly created 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  105 |         Base *b = new Base;
+      |         ^~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:106:13: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  106 |         if (Derived *d = dynamic_cast<Derived *>(b)) {
+      |             ^~~~~~~
+      |             auto
+/data/project/code_analysis_summary.cpp:112:9: warning: use auto when initializing with a cast to avoid duplicating the type name [modernize-use-auto]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |         ^~~~~~~~~~~~~~~~~~~~~
+      |         auto *fun_pointer
+/data/project/code_analysis_summary.cpp:112:33: warning: do not use reinterpret_cast [cppcoreguidelines-pro-type-reinterpret-cast]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                 ^
+/data/project/code_analysis_summary.cpp:112:59: warning: redundant void argument list in named cast [modernize-redundant-void-arg]
+  112 |         void (*fun_pointer)() = reinterpret_cast<void (*)(void)>(answer);
+      |                                                           ^~~~
+/data/project/code_analysis_summary.cpp:117:19: warning: do not use const_cast to remove const qualifier [cppcoreguidelines-pro-type-const-cast]
+  117 |         int *pj = const_cast<int *>(&j);
+      |                   ^
+/data/project/code_analysis_summary.cpp:127:15: warning: variable 'cl1' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |               ^
+/data/project/code_analysis_summary.cpp:127:20: warning: variable 'cl2' is not initialized [cppcoreguidelines-init-variables]
+  127 |         Color cl1, cl2;
+      |                    ^
+/data/project/code_analysis_summary.cpp:163:9: warning: returning a newly created resource of type 'const User *' or 'gsl::owner<>' from a function whose return type is not 'gsl::owner<>' [cppcoreguidelines-owning-memory]
+  163 |         return new User{company_id, user_id, "foo"};
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/data/project/code_analysis_summary.cpp:177:20: warning: prefer a lambda to std::bind [modernize-avoid-bind]
+  177 |         auto clj = std::bind(add, x, num);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~
+      |                    [x, num] { return add(x, num); }
+/data/project/code_analysis_summary.cpp:181:9: warning: use range-based for loop instead [modernize-loop-convert]
+  181 |         for (auto iter = vec.begin(); iter != vec.end(); ++iter) {
+      |         ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             (int iter : vec)
+  182 |             std::cout << *iter;
+      |                          ~~~~~
+      |                          iter
+/data/project/code_analysis_summary.cpp:188:17: warning: pass by value and use std::move [modernize-pass-by-value]
+   10 |         MyClass(const std::string &Copied,
+      |                 ^~~~~~~~~~~~~~~~~~~
+      |                 std::string 
+   11 |                 const std::string &ReadOnly)
+   12 |                 : Copied(Copied), ReadOnly(ReadOnly) {}
+      |                                
+      |                          std::move( )
+/data/project/code_analysis_summary.cpp:194:28: warning: member 'ReadOnly' of type 'const std::string &' (aka 'const basic_string<char> &') is a reference [cppcoreguidelines-avoid-const-or-ref-data-members]
+  194 |         const std::string &ReadOnly;
+      |                            ^
+/data/project/code_analysis_summary.cpp:199:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:199:21: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  199 |         virtual int someMethod(const int x, const int factor = 1) const {
+      |                     ^
+/data/project/code_analysis_summary.cpp:206:9: warning: function 'someMethod' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:206:13: warning: default arguments on virtual or override methods are prohibited [google-default-arguments]
+  206 |         int someMethod(const int x, const int factor = 0) const override {
+      |             ^
+/data/project/code_analysis_summary.cpp:215:9: warning: function 'empty' should be marked [[nodiscard]] [modernize-use-nodiscard]
+  215 |         bool empty(int num) const {
+      |         ^
+      |         [[nodiscard]] 
+/data/project/code_analysis_summary.cpp:215:14: warning: method 'empty' can be made static [readability-convert-member-functions-to-static]
+  215 |         bool empty(int num) const {
+      |              ^              ~~~~~
+      |         static 
+
+2044 warnings generated.
+
